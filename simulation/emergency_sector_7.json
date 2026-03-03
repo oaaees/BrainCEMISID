@@ -1,0 +1,30 @@
+{
+  "scenario": "Industrial Reactor Failure",
+  "initial_mood": "neutral",
+  "events": [
+    {
+      "timestamp": "T1",
+      "narrative": "You are performing a routine check when a loud siren starts blaring.",
+      "sensory_input": {
+        "hearing": "high-pitched rhythmic siren",
+        "sight": "red flashing lights on the overhead panel",
+        "smell": "faint scent of ozone and burning plastic",
+        "touch": "None",
+        "taste": "None"
+      },
+      "goal": "Identify the source of the alarm."
+    },
+    {
+      "timestamp": "T2",
+      "narrative": "The main door locks automatically. Smoke begins to fill the room.",
+      "sensory_input": {
+        "sight": "thick grey smoke reducing visibility",
+        "touch": "increasing ambient temperature",
+        "smell": "acrid smoke",
+        "hearing": "None",
+        "taste": "None"
+      },
+      "goal": "Find an alternative exit or stabilize the reactor."
+    }
+  ]
+}

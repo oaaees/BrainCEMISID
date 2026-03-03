@@ -1,0 +1,70 @@
+{
+  "scenario_name": "Industrial Reactor Failure",
+  "run_id": "660c8910",
+  "timestamp": "2026-03-03T02:17:40.683541",
+  "frames": [
+    {
+      "timestamp": "T1",
+      "narrative": "You are performing a routine check when a loud siren starts blaring.",
+      "goal": "Identify the source of the alarm.",
+      "braincemisid": {
+        "dominant_emotion": "Fear",
+        "emotion_intensity": 0.5,
+        "strategic_plan": {
+          "thought": "High fear (0.50) combined with strong sensory input (siren, flashing lights, ozone/burning plastic) creates an urgent need to rapidly identify the source of the perceived threat. The plan prioritizes quick localization and confirmation to reduce uncertainty and potentially inform immediate next actions, crucial for managing a heightened emotional state.",
+          "plan": [
+            {
+              "step": "Attend to the loudest auditory (siren) and brightest visual (red flashing lights) signals to establish an initial direction of origin.",
+              "reason": "High fear (0.50) demands immediate processing of prominent threat indicators to begin localization and initiate uncertainty reduction."
+            },
+            {
+              "step": "Orient and move directly towards the perceived origin of the combined alarm signals, prioritizing speed.",
+              "reason": "Urgency driven by fear and the potential threat indicated by ozone/burning smell necessitates direct movement towards the source for rapid identification."
+            },
+            {
+              "step": "Perform a focused visual scan of the immediate environment in the direction of the strongest signals to pinpoint the specific alarm device, panel, or area.",
+              "reason": "Fear increases the need for concrete information; visual confirmation is crucial to identify the exact source quickly and reduce uncertainty."
+            },
+            {
+              "step": "Clearly identify and register the type and exact location of the alarm source (e.g., 'fire alarm panel on north wall', 'smoke detector above door').",
+              "reason": "Completes the goal of identification, providing critical information to inform subsequent actions and directly contributing to a reduction of the current fear level by resolving the primary unknown."
+            }
+          ]
+        },
+        "final_responses": [
+          "The blaring, high-pitched rhythmic siren demands my immediate attention. My vision locks onto the source of the bright red, flashing lights: the overhead panel. The alarm appears to originate from there, directly above.",
+          "My gaze is locked onto the overhead panel, the relentless siren and those urgent red flashes guiding my focus. A sudden jolt of determination courses through me. I orient myself directly beneath it, moving swiftly and decisively towards the alarming origin. The faint, unsettling scent of ozone and burning plastic seems to quicken my pace even more, urging me closer.",
+          "Positioned directly beneath the blaring overhead panel, its red lights flash with an insistent rhythm. My gaze now sweeps across its surface, searching intently. The piercing siren continues its relentless shriek, making me focus more sharply. I am meticulously scanning every dial, every indicator, every joint and seam of the panel, trying to isolate the specific device or area from which this alarming combination of sound and light, and the unsettling scent of ozone and burning plastic, truly originates. The unexpected intensity of it all drives me to find the source without delay.",
+          "My focused visual scan of the blaring overhead panel has pinpointed it. A diagnostic indicator, starkly labeled \"SYSTEM OVERHEAT / ELECTRICAL FAULT,\" is flashing an angry red on the lower-right quadrant of the panel. The piercing shriek of the siren seems to emanate directly from a small grille positioned right beside this alarming indicator. Here, the unsettling scent of ozone and burning plastic is undeniably stronger, specifically originating from a section of conduit directly adjacent to the fault light, which appears discolored and faintly warped."
+        ]
+      },
+      "baseline_control": {
+        "final_response": "I was running my hand along the cool metal of the primary conduit, feeling for any subtle vibrations, when an ear-splitting, three-tone shriek ripped through the quiet hum of the station. Red emergency lights immediately began flashing, bathing the corridor in an ominous crimson pulse. My heart leaped into my throat. \"Status check!\" I barked into my wrist comm, already sprinting towards the nearest information panel, my eyes scanning for a system schematic. The alarm's resonance was shaking the floor beneath my feet – it was deep, vibrating through the station's core, and I needed to pinpoint its origin on the schematic before I could move to investigate directly."
+      }
+    },
+    {
+      "timestamp": "T2",
+      "narrative": "The main door locks automatically. Smoke begins to fill the room.",
+      "goal": "Find an alternative exit or stabilize the reactor.",
+      "braincemisid": {
+        "dominant_emotion": "Fear",
+        "emotion_intensity": 0.45,
+        "strategic_plan": {
+          "thought": "Failed to generate complex plan; falling back to reactive response.",
+          "plan": [
+            {
+              "step": "Process input: 'Find an alternative exit or stabilize the reactor.' directly.",
+              "reason": "Fallback mechanism triggered."
+            }
+          ]
+        },
+        "final_responses": [
+          "Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\nPlease retry in 33.850183855s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}\n, retry_delay {\n  seconds: 33\n}\n]"
+        ]
+      },
+      "baseline_control": {
+        "final_response": "Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\nPlease retry in 32.877351s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}\n, retry_delay {\n  seconds: 32\n}\n]"
+      }
+    }
+  ]
+}
