@@ -67,17 +67,27 @@ class EmotionalState:
         try:
             # Clean up potential markdown blocks
             clean_response = re.sub(r'```(?:json)?|```', '', response).strip()
+            if not clean_response:
+                return
+
             deltas = json.loads(clean_response)
             
+            if not isinstance(deltas, dict):
+                print(f"Warning: Emotional deltas is not a dict: {deltas}")
+                return
+
             # 3. Apply the Deltas (E_t = E_{t-1} + Delta)
             for emotion in self.emotions:
                 if emotion in deltas:
-                    delta_value = float(deltas[emotion])
-                    # Clamp between 0.0 and 1.0
-                    self.emotions[emotion] = min(1.0, self.emotions[emotion] + delta_value)
+                    try:
+                        delta_value = float(deltas[emotion])
+                        # Clamp between 0.0 and 1.0
+                        self.emotions[emotion] = min(1.0, self.emotions[emotion] + delta_value)
+                    except (ValueError, TypeError):
+                        continue
                     
         except (json.JSONDecodeError, ValueError) as e:
-            print(f"Warning: Failed to parse emotional deltas. Raw response: {response}")
+            print(f"Warning: Failed to parse emotional deltas: {e}. Raw response: {response}")
 
     def get_dominant_emotion(self) -> Tuple[str, float]:
         """Returns the emotion with the highest current value."""

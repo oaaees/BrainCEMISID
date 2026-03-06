@@ -1,7 +1,7 @@
 {
   "scenario_name": "Industrial Reactor Failure",
-  "run_id": "660c8910",
-  "timestamp": "2026-03-03T02:17:40.683541",
+  "run_id": "ef3ff2d9",
+  "timestamp": "2026-03-03T03:14:11.486533",
   "frames": [
     {
       "timestamp": "T1",
@@ -9,37 +9,42 @@
       "goal": "Identify the source of the alarm.",
       "braincemisid": {
         "dominant_emotion": "Fear",
-        "emotion_intensity": 0.5,
+        "emotion_intensity": 0.6,
         "strategic_plan": {
-          "thought": "High fear (0.50) combined with strong sensory input (siren, flashing lights, ozone/burning plastic) creates an urgent need to rapidly identify the source of the perceived threat. The plan prioritizes quick localization and confirmation to reduce uncertainty and potentially inform immediate next actions, crucial for managing a heightened emotional state.",
+          "thought": "Okay, the user goal is straightforward, but the current emotional state – fear – demands a cautious, methodical approach. The sensory input is telling a story of potential danger, so I need to prioritize safety and gathering information. Starting with a systematic breakdown is key. The 'Identify the source' part implies a layered approach, so I need to focus on identifying the immediate triggers first.",
           "plan": [
             {
-              "step": "Attend to the loudest auditory (siren) and brightest visual (red flashing lights) signals to establish an initial direction of origin.",
-              "reason": "High fear (0.50) demands immediate processing of prominent threat indicators to begin localization and initiate uncertainty reduction."
+              "step": "1",
+              "reason": "The high-pitched siren and flashing lights immediately trigger a sense of unease and potential danger – aligning with the Fear emotion. I need to understand the immediate visual cues."
             },
             {
-              "step": "Orient and move directly towards the perceived origin of the combined alarm signals, prioritizing speed.",
-              "reason": "Urgency driven by fear and the potential threat indicated by ozone/burning smell necessitates direct movement towards the source for rapid identification."
+              "step": "2",
+              "reason": "The rapid flashing is likely a critical piece of information – escalating the anxiety. I need to solidify the visual cue as a potential trigger."
             },
             {
-              "step": "Perform a focused visual scan of the immediate environment in the direction of the strongest signals to pinpoint the specific alarm device, panel, or area.",
-              "reason": "Fear increases the need for concrete information; visual confirmation is crucial to identify the exact source quickly and reduce uncertainty."
+              "step": "3",
+              "reason": "The combination of smells creates a disconcerting atmosphere, amplifying the fear. It suggests a potentially hazardous event."
             },
             {
-              "step": "Clearly identify and register the type and exact location of the alarm source (e.g., 'fire alarm panel on north wall', 'smoke detector above door').",
-              "reason": "Completes the goal of identification, providing critical information to inform subsequent actions and directly contributing to a reduction of the current fear level by resolving the primary unknown."
+              "step": "4",
+              "reason": "The 'overhead panel' provides a potential point of focus – a visual representation of the alarm system. It’s a starting point for investigation."
+            },
+            {
+              "step": "5",
+              "reason": "To address the fear, a methodical, controlled approach is essential.  Rapid action could escalate the anxiety. A slower pace offers a chance to assess the situation calmly."
             }
           ]
         },
         "final_responses": [
-          "The blaring, high-pitched rhythmic siren demands my immediate attention. My vision locks onto the source of the bright red, flashing lights: the overhead panel. The alarm appears to originate from there, directly above.",
-          "My gaze is locked onto the overhead panel, the relentless siren and those urgent red flashes guiding my focus. A sudden jolt of determination courses through me. I orient myself directly beneath it, moving swiftly and decisively towards the alarming origin. The faint, unsettling scent of ozone and burning plastic seems to quicken my pace even more, urging me closer.",
-          "Positioned directly beneath the blaring overhead panel, its red lights flash with an insistent rhythm. My gaze now sweeps across its surface, searching intently. The piercing siren continues its relentless shriek, making me focus more sharply. I am meticulously scanning every dial, every indicator, every joint and seam of the panel, trying to isolate the specific device or area from which this alarming combination of sound and light, and the unsettling scent of ozone and burning plastic, truly originates. The unexpected intensity of it all drives me to find the source without delay.",
-          "My focused visual scan of the blaring overhead panel has pinpointed it. A diagnostic indicator, starkly labeled \"SYSTEM OVERHEAT / ELECTRICAL FAULT,\" is flashing an angry red on the lower-right quadrant of the panel. The piercing shriek of the siren seems to emanate directly from a small grille positioned right beside this alarming indicator. Here, the unsettling scent of ozone and burning plastic is undeniably stronger, specifically originating from a section of conduit directly adjacent to the fault light, which appears discolored and faintly warped."
+          "The sound is… significant. It’s a sharp, insistent pulse.  There’s a distinct lack of… warmth.  It’s a pattern, though.  A persistent, automated pattern.  Focusing.",
+          "The rhythm is… unsettling. It’s a steady, unwavering pulse. A background hum, overlaid with a subtle, almost metallic tang. It’s difficult to discern any origin, just a constant, unwavering focus. The light patterns are… deliberate. Controlled. Like a program running.",
+          "The sound is… insistent. It’s a consistent rhythm. A background hum, punctuated by these rapid, precise pulses. It’s becoming more… pronounced. \n\nThere’s a subtle shift in the light patterns, a tightening of the focus. It feels… automated. Almost like a loop.",
+          "The sound is… significant. It’s a sharp, insistent pulse. There’s a distinct lack of… warmth. It’s a pattern, though. A persistent, automated pattern. Focusing.",
+          "The rhythm… accelerates. It’s a familiar cadence, one that rarely deviates. The light pulses intensify. A sense of… preparation. Almost an expectation."
         ]
       },
       "baseline_control": {
-        "final_response": "I was running my hand along the cool metal of the primary conduit, feeling for any subtle vibrations, when an ear-splitting, three-tone shriek ripped through the quiet hum of the station. Red emergency lights immediately began flashing, bathing the corridor in an ominous crimson pulse. My heart leaped into my throat. \"Status check!\" I barked into my wrist comm, already sprinting towards the nearest information panel, my eyes scanning for a system schematic. The alarm's resonance was shaking the floor beneath my feet – it was deep, vibrating through the station's core, and I needed to pinpoint its origin on the schematic before I could move to investigate directly."
+        "final_response": "Okay, here's my response, attempting to be calm and methodical:\n\n“Alright, let’s take a moment. I’ve just noticed a loud siren. Could you confirm if that’s a standard alarm for this location?” \n\n**(Pause - waiting for confirmation from the person speaking.)**\n\n“Please tell me if you can give me a moment to assess the situation. I’ll need to stay calm and try to understand what’s going on.”\n\n---\n\n**Why this response is designed:**\n\n* **Calm & Professional:**  Acknowledging the situation without panic is crucial.\n* **Confirmation Request:**  Immediately clarifies the situation and asks for confirmation to avoid unnecessary alarm.\n* **Brief & Actionable:**  Moves the response towards a practical task.\n* **Signals Focus:**  “Stay calm and try to understand” encourages a measured approach.\n\nTo help me tailor the response further, could you tell me:\n\n*   **What's the setting?** (e.g., office, hospital, residential building) – This will influence how I phrase my response.\n*   **What kind of system is this?** (e.g., fire alarm, medical alert, security)"
       }
     },
     {
@@ -48,22 +53,42 @@
       "goal": "Find an alternative exit or stabilize the reactor.",
       "braincemisid": {
         "dominant_emotion": "Fear",
-        "emotion_intensity": 0.45,
+        "emotion_intensity": 1.0,
         "strategic_plan": {
-          "thought": "Failed to generate complex plan; falling back to reactive response.",
+          "thought": "Okay, the user goal is urgent – finding a way out or preventing a crisis. The current emotional state is definitely heightened by fear, requiring a cautious and deliberate approach. I need to prioritize safety and rapid assessment, while simultaneously subtly exploring the possibilities for mitigation. My initial impulse is to focus on gathering information quickly before panic sets in. Let’s start with a systematic breakdown into manageable steps, acknowledging the underlying anxiety.",
           "plan": [
             {
-              "step": "Process input: 'Find an alternative exit or stabilize the reactor.' directly.",
-              "reason": "Fallback mechanism triggered."
+              "step": "1",
+              "reason": "The intensity of the fear requires immediate and detailed observation to understand the immediate threat. Focusing on visual cues first will help establish a baseline and avoid over-analysis."
+            },
+            {
+              "step": "2",
+              "reason": "The escalating temperature could be a physiological response to the smoke, intensifying the fear and potentially impacting cognitive function. This provides a crucial contextual layer."
+            },
+            {
+              "step": "3",
+              "reason": "Understanding the root cause of the problem is vital. A sudden, unexplained increase in smoke demands a focused, cautious investigation."
+            },
+            {
+              "step": "4",
+              "reason": "Prior experience informs decision-making. A quick, subconscious assessment of potential risks or solutions is warranted."
+            },
+            {
+              "step": "5",
+              "reason": "A structured approach, prioritizing safety and immediate risk mitigation, is essential given the fear response. The grid search provides a clear, actionable next step."
             }
           ]
         },
         "final_responses": [
-          "Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\nPlease retry in 33.850183855s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}\n, retry_delay {\n  seconds: 33\n}\n]"
+          "The sequence repeats. It’s… predictable. The warmth is fading. The patterns are hardening.",
+          "The sequence repeats. The warmth is fading. The patterns are hardening.",
+          "The sequence repeats. The warmth is fading. The patterns are hardening. \n\nIt’s… consolidating. A tightening. Almost a containment. \n",
+          "The sequence repeats. It’s… predictable. The warmth is fading. The patterns are hardening. \n\nThe familiar cadence… intensifies. A tightening. Almost an expectation.",
+          "The sequence repeats. It’s… predictable. The warmth is fading. The patterns are hardening. A tightening. Almost an expectation. \n\nThe familiar cadence… intensifies. A tightening. Almost an expectation."
         ]
       },
       "baseline_control": {
-        "final_response": "Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\nPlease retry in 32.877351s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}\n, retry_delay {\n  seconds: 32\n}\n]"
+        "final_response": "“Okay, this is unusual. The main door locking automatically… that’s definitely not typical. Let’s take a moment to assess. First, can you confirm that the door locking mechanism is functioning normally? Then, I need to determine if there’s a fire or some sort of emergency. Let’s try to figure out what’s happening.”"
       }
     }
   ]

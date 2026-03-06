@@ -41,15 +41,20 @@ class SensoryGate:
             clean_response = re.sub(r'```(?:json)?|```', '', response).strip()
             sensory_data = json.loads(clean_response)
             
-            # Ensure all keys exist
+            # Defensive check: ensure it's a dictionary
+            if not isinstance(sensory_data, dict):
+                raise ValueError("Sensory data is not a JSON object")
+                
+            # Ensure all keys exist and are formatted well
+            final_data = {}
             for sense in ["sight", "hearing", "smell", "touch", "taste"]:
-                if sense not in sensory_data:
-                    sensory_data[sense] = "None"
-                    
-            return sensory_data
+                val = sensory_data.get(sense, "None")
+                final_data[sense] = str(val) if val else "None"
+                
+            return final_data
         
-        except json.JSONDecodeError:
-            print(f"Warning: Failed to parse sensory data. Raw response: {response}")
+        except (json.JSONDecodeError, ValueError, TypeError) as e:
+            print(f"Warning: Failed to parse sensory data: {e}. Raw response: {response}")
             return {
                 "sight": "None", "hearing": "None", "smell": "None", 
                 "touch": "None", "taste": "None"
