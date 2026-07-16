@@ -12,8 +12,9 @@ class StrategicPlanner:
     into an actionable sequence of steps, justified by the current cognitive state.
     """
 
-    def __init__(self, llm_engine: LLMEngine):
+    def __init__(self, llm_engine: LLMEngine, max_steps: int = 2):
         self.llm_engine = llm_engine
+        self.max_steps = max_steps
 
     def decompose_task(self, goal: str, cognitive_snapshot: str) -> Dict[str, Any]:
         """
@@ -28,23 +29,27 @@ class StrategicPlanner:
         """
         prompt = (
             "You are the Strategic Planner of a cognitive architecture. "
-            "Your task is to decompose the User Goal into a sequence of discrete sub-tasks (maximum 5 steps).\n\n"
+            f"Your task is to decompose the User Goal into a sequence of discrete sub-tasks (maximum {self.max_steps} steps).\n\n"
             f"COGNITIVE STATE:\n{cognitive_snapshot}\n\n"
             f"USER GOAL: \"{goal}\"\n\n"
             "CRITICAL INSTRUCTION: Your plan MUST be driven by your current emotional state. "
             "If you are feeling Fear, your steps should be cautious, defensive, or hesitant. "
             "If you are feeling Curiosity or Joy, your steps should be bold and investigative. "
             "Do NOT just repeat the goal. Adapt your actions to your feelings.\n\n"
+            "CONCISENESS RULES:\n"
+            "- Each step MUST be a single short sentence (max 15 words).\n"
+            "- Do NOT repeat the goal text in your steps.\n"
+            "- Each step must be a distinct, actionable task.\n\n"
             "Return a strictly formatted JSON object:\n"
             "{\n"
-            "  \"thought\": \"Analysis of how your emotions are shaping this specific plan.\",\n"
+            "  \"thought\": \"Brief analysis of how your emotions shape this plan (1-2 sentences).\",\n"
             "  \"plan\": [\n"
             "    {\"step\": \"Action description\", \"reason\": \"Emotional justification for this action\"}\n"
             "  ]\n"
             "}\n"
-            "Do not include Markdown blocks, just the raw JSON."
         )
         
+        print(f"  [StrategicPlanner] Decomposing goal: '{goal[:50]}...'")
         response = self.llm_engine.generate_response(prompt)
         
         try:
@@ -79,7 +84,7 @@ class StrategicPlanner:
             if not validated_plan:
                 raise ValueError("No valid steps found in the plan")
                 
-            plan_data["plan"] = validated_plan[:5]
+            plan_data["plan"] = validated_plan[:self.max_steps]
             return plan_data
             
         except (json.JSONDecodeError, ValueError, TypeError) as e:

@@ -31,9 +31,9 @@ class SensoryGate:
             "'sight', 'hearing', 'smell', 'touch', 'taste'.\n"
             "If a sense is not present or implied in the text, use the value 'None'.\n"
             "Keep descriptions very short (1-3 words) and qualitative (e.g., 'dim blue lighting').\n"
-            "Do not include any Markdown blocks, just the raw JSON object."
-        )
+            )
         
+        print(f"  [SensoryGate] Extracting senses from narrative ({len(text)} chars)...")
         response = self.llm_engine.generate_response(prompt)
         
         try:

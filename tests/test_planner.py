@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import MagicMock
 import os
 from dotenv import load_dotenv
 from core.llm_engine import LLMEngine
@@ -53,17 +54,11 @@ class TestBrainCEMISIDPlanner(unittest.TestCase):
         goal = "Approach the mysterious glowing object."
         
         # Escenario A: Miedo alto
-        fear_snapshot = (
-            "Emotion: Fear (0.90/1.0)\n"
-            "Active Senses: None"
-        )
+        fear_snapshot = "Emotion: Fear (0.90/1.0)\nActive Senses: None"
         plan_data_fear = self.planner.decompose_task(goal, fear_snapshot)
         
         # Escenario B: Curiosidad alta
-        curiosity_snapshot = (
-            "Emotion: Curiosity (0.90/1.0)\n"
-            "Active Senses: None"
-        )
+        curiosity_snapshot = "Emotion: Curiosity (0.90/1.0)\nActive Senses: None"
         plan_data_curiosity = self.planner.decompose_task(goal, curiosity_snapshot)
         
         # Las acciones iniciales (o la forma de abordarlas) deberían ser distintas
@@ -76,6 +71,74 @@ class TestBrainCEMISIDPlanner(unittest.TestCase):
         print("\n✅ Prueba de Deriva Conductual Pasada exitosamente:")
         print(f"   Paso Inicial (Miedo): {step_fear}")
         print(f"   Paso Inicial (Curiosidad): {step_curiosity}")
+
+    def test_markdown_stripping(self):
+        """Verifica que limpie los bloques ```json de la respuesta."""
+        mock_llm = MagicMock()
+        mock_llm.generate_response.return_value = '''```json
+{
+  "thought": "Thinking about markdown",
+  "plan": [
+    {"step": "Action 1", "reason": "Reason 1"}
+  ]
+}
+```'''
+        planner = StrategicPlanner(llm_engine=mock_llm)
+        plan_data = planner.decompose_task("Test goal", "Cognitive state")
+        self.assertEqual(plan_data["thought"], "Thinking about markdown")
+        self.assertEqual(len(plan_data["plan"]), 1)
+        self.assertEqual(plan_data["plan"][0]["step"], "Action 1")
+        print("✅ Prueba de Limpieza de Markdown: PASADA.")
+
+    def test_fallback_on_invalid_json(self):
+        """Verifica el fallback ante JSON malformado."""
+        mock_llm = MagicMock()
+        mock_llm.generate_response.return_value = "This is just text, not JSON at all."
+        planner = StrategicPlanner(llm_engine=mock_llm)
+        plan_data = planner.decompose_task("Survive", "Fear")
+        self.assertIn("Failed to generate", plan_data["thought"])
+        self.assertEqual(plan_data["plan"][0]["step"], "Focus on goal: 'Survive'")
+        print("✅ Prueba de Fallback por JSON Inválido: PASADA.")
+
+    def test_fallback_on_missing_keys(self):
+        """Verifica fallback si faltan claves necesarias."""
+        mock_llm = MagicMock()
+        mock_llm.generate_response.return_value = '{"wrong_key": "value"}'
+        planner = StrategicPlanner(llm_engine=mock_llm)
+        plan_data = planner.decompose_task("Goal", "State")
+        self.assertIn("Failed to generate", plan_data["thought"])
+        print("✅ Prueba de Fallback por Claves Faltantes: PASADA.")
+
+    def test_fallback_on_invalid_plan_type(self):
+        """Verifica fallback si 'plan' no es una lista."""
+        mock_llm = MagicMock()
+        mock_llm.generate_response.return_value = '{"thought": "ok", "plan": "Not a list"}'
+        planner = StrategicPlanner(llm_engine=mock_llm)
+        plan_data = planner.decompose_task("Goal", "State")
+        self.assertIn("Failed to generate", plan_data["thought"])
+        print("✅ Prueba de Fallback por Tipo Inválido de Plan: PASADA.")
+
+    def test_defaults_for_missing_step_reason(self):
+        """Verifica manejo de steps o reasons faltantes y dropped items."""
+        mock_llm = MagicMock()
+        mock_llm.generate_response.return_value = '''{
+            "thought": "Testing items",
+            "plan": [
+                {"step": "Only step"},
+                {"reason": "Only reason"},
+                "invalid string item",
+                {"step": "Valid step", "reason": "Valid reason"}
+            ]
+        }'''
+        planner = StrategicPlanner(llm_engine=mock_llm)
+        plan_data = planner.decompose_task("Goal", "State")
+        
+        # Debe haber 2 pasos válidos: "Only step" (con reason por defecto) y el último
+        self.assertEqual(len(plan_data["plan"]), 2)
+        self.assertEqual(plan_data["plan"][0]["step"], "Only step")
+        self.assertEqual(plan_data["plan"][0]["reason"], "No reason provided")
+        self.assertEqual(plan_data["plan"][1]["step"], "Valid step")
+        print("✅ Prueba de Comportamiento por Defecto en Pasos: PASADA.")
 
 if __name__ == "__main__":
     unittest.main()

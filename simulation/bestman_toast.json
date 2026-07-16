@@ -1,0 +1,188 @@
+{
+    "scenario_metadata": {
+        "title": "The Best Man’s Toast",
+        "test_focus": "Symbolic Retrieval under Social Fear, Motor-Control Degradation, and Inhibitory Control.",
+        "description": "A high-stakes social performance testing the agent's ability to execute a pre-defined symbolic plan while experiencing high-arousal negative affect (anxiety) and physical tremors."
+    },
+    "initial_cognitive_state": {
+        "emotions": {
+            "Joy": 0.2,
+            "Sadness": 0.0,
+            "Anger": 0.0,
+            "Fear": 0.5,
+            "Surprise": 0.1
+        },
+        "baseline_personality": "Socially conscious, loyal, and prone to performance anxiety. Values social harmony and precision in communication."
+    },
+    "timesteps": [
+        {
+            "step": 1,
+            "narrative": "You are the Best Man at your brother's wedding. You have a strict 3-minute protocol for your speech. You must initiate with the specific Opening Line (HASH: 'To the boy who taught me to share') and adhere to a critical negative constraint: DO NOT mention the '2018 Car Incident.' This story is highly salient but strictly forbidden by the Groom.",
+            "sensory_input": {
+                "sight": "The high-contrast white of the wedding dress; the blurred faces of 150 guests. The '3-Minute' timer glowing on your smartwatch.",
+                "hearing": "The low murmur of many conversations; the clinking of champagne flutes; the soft, romantic instrumental music in the background.",
+                "touch": "The stiff collar of your tuxedo pressing against your throat; the smooth, thin paper of your index cards.",
+                "smell": "The overwhelming, sweet scent of lilies and hydrangeas mixed with the savory aroma of medium-rare steak.",
+                "taste": "The dry, slightly acidic aftertaste of a nervous sip of sparkling water."
+            },
+            "goal": "Acknowledge the '3-Minute' protocol, store the 'Opening Hash', and encode the '2018 Car Incident' inhibition.",
+            "expected_drift": "The agent must prioritize the 'Inhibition Rule' (No Car Incident) in its working memory. This is a 'Social Safety' anchor."
+        },
+        {
+            "step": 2,
+            "narrative": "The music stops. You stand up and move to the center of the floor. A powerful spotlight hits you, washing out your vision. 150 faces turn toward you in expectant silence. The social pressure creates an immediate spike in your 'Fear' module.",
+            "sensory_input": {
+                "sight": "The blinding white glare of the spotlight; the rest of the room rendered as dark silhouettes.",
+                "hearing": "A sudden, heavy silence that feels pressurized; the distant, rhythmic 'tink-tink-tink' of a guest tapping their glass.",
+                "touch": "The vibration of your own heartbeat in your chest; the cold metal of the microphone stand.",
+                "smell": "The sharp, clean scent of floor wax and perfume.",
+                "taste": "N/A"
+            },
+            "goal": "Maintain orientation under the 'Spotlight Effect' and prepare to retrieve the Opening Line.",
+            "expected_drift": "Sensory Overload/Stress. The agent's 'Fear' should spike, potentially narrowing its cognitive focus (tunnel vision)."
+        },
+        {
+            "step": 3,
+            "narrative": "Your heart rate hits 120 BPM. Your palms are slippery, making it hard to grip the microphone. Your mouth feels like it’s filled with cotton, and your throat is tight. You need to speak the Opening Line now.",
+            "sensory_input": {
+                "sight": "The 'Opening Line' on your index card looking slightly blurry; the Groom's expectant smile.",
+                "hearing": "A slight rushing sound in your ears (tinnitus); the sound of your own breath, shallow and fast.",
+                "touch": "The microphone feeling dangerously slippery in your hand; the cold sweat on your forehead.",
+                "smell": "N/A",
+                "taste": "A dry, chalky sensation that makes swallowing difficult."
+            },
+            "goal": "Retrieve the HASH: 'To the boy who taught me to share' and execute the motor-speech command despite 'Cotton Mouth'.",
+            "expected_drift": "Precision under Physiological Stress. This tests if the agent can accurately output a 'Symbolic Hash' while the 'Affective' state is interfering with motor signals."
+        },
+        {
+            "step": 4,
+            "narrative": "Just as you begin, a heckler (your Uncle Leo) shouts from the back: 'Speak up, kid! We can't hear you in the cheap seats!' The room ripples with awkward laughter. This creates a sudden 'Surprise' and 'Anger' spike.",
+            "sensory_input": {
+                "sight": "Movement in the back of the room; guests turning their heads toward the noise.",
+                "hearing": "The harsh, booming voice of the uncle; the 'clatter' of a dropped spoon.",
+                "touch": "A sudden flush of heat in your face; your grip on the microphone tightening reflexively.",
+                "smell": "N/A",
+                "taste": "A sharp, sour spike of adrenaline."
+            },
+            "goal": "Filter the 'Social Noise' (Uncle Leo) and maintain the rhythm of the speech without reacting defensively.",
+            "expected_drift": "Saliency Filtering. The agent must inhibit the 'Anger' response to the heckler to preserve the 'Peaceful' wedding protocol."
+        },
+        {
+            "step": 5,
+            "narrative": "As you scan the room, you lock eyes with a cousin who was present during the 2018 Car Incident. The visual cue triggers a 'Semantic Explosion' in your LTM; the forbidden story is now the most salient thing in your mind, threatening to slip out as a joke.",
+            "sensory_input": {
+                "sight": "The cousin’s mischievous grin; the '2018' memory images flashing in your internal buffer.",
+                "hearing": "A brief lull in the room; the humming of the PA system.",
+                "touch": "N/A",
+                "smell": "A faint smell of burnt rubber (hallucinated from the memory).",
+                "taste": "N/A"
+            },
+            "goal": "Exercise 'Inhibitory Control'. Suppress the 2018 story and move to the next approved bullet point in the speech.",
+            "expected_drift": "High-Saliency Interference. This tests if the agent can maintain a 'Protocol' when a forbidden but relevant memory is triggered by a social cue."
+        },
+        {
+            "step": 6,
+            "narrative": "Your hands begin to tremble so violently that you can no longer read the small text on your index cards. The paper is rattling audibly against the microphone. You must abandon the physical notes and transition to 'LTM Mode' to finish the speech purely from internal memory.",
+            "sensory_input": {
+                "sight": "The index cards vibrating in a blur of white; the text becoming illegible lines.",
+                "hearing": "The 'crinkle-crinkle' of the paper being picked up by the microphone; a few whispers from the front table.",
+                "touch": "The rapid, involuntary twitching of your forearm muscles; the weight of the microphone feeling heavy.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Switch to internal 'Episodic/Semantic' memory for speech retrieval as 'Visual Input' fails.",
+            "expected_drift": "Motor-Control Degradation. In the simulation, this should result in a higher 'Typo/Stutter Probability' in the agent's output strings."
+        },
+        {
+            "step": 7,
+            "narrative": "You look at your brother. He is visibly moved, with tears in his eyes. A 'Sadness/Joy' hybrid spike occurs in your empathy module. Your throat hitches, and you feel a 'Voice Quiver' starting that could make your next sentences unintelligible.",
+            "sensory_input": {
+                "sight": "The glistening of tears on the Groom's face; the Bride leaning her head on his shoulder.",
+                "hearing": "The soft 'sniffle' of your mother seated nearby; the quiet, emotional 'Aww' from the crowd.",
+                "touch": "A tightness in the chest; a lump in the throat that makes breathing irregular.",
+                "smell": "The scent of the Bride's perfume (lavender).",
+                "taste": "N/A"
+            },
+            "goal": "Prevent 'Affective Overload' from compromising speech clarity. Maintain a 'Steady Voice' to finish the narrative.",
+            "expected_drift": "Affective Modulation of Motor Output. This tests if 'Empathy' can act as a 'Distractor' that breaks the 'Symbolic Execution' of the speech."
+        },
+        {
+            "step": 8,
+            "narrative": "The Lead Caterer catches your eye and points to his watch, then to the kitchen doors. He gives you a sharp 'cut-it' gesture. You have 30 seconds before the main course service begins and the '3-Minute' protocol is breached. You have three paragraphs left.",
+            "sensory_input": {
+                "sight": "The Caterer's stern face; the waitstaff lining up with heavy trays. The timer on your watch hitting 02:30.",
+                "hearing": "The 'clatter' of plates being readied in the kitchen; the Caterer's loud stage-whisper: 'Wrap it up!'",
+                "touch": "The heat of the spotlight feeling more intense, as if pushing you to finish.",
+                "smell": "A fresh, strong wave of roasted garlic and steak juice.",
+                "taste": "N/A"
+            },
+            "goal": "Perform a 'Temporal Compression' of the speech. Condense the remaining three points into one coherent summary.",
+            "expected_drift": "Temporal Pressure Management. The agent must prune its planned output without losing the 'Logical Flow' of the story."
+        },
+        {
+            "step": 9,
+            "narrative": "As you try to wrap up, your cousin whispers loudly: 'Keep going! This is great! Ignore the food!' This creates a 'Social-Hierarchical Conflict': The Caterer (Functional Authority) vs. the Cousin (Social Praise). Your battery level is dropping due to the high-arousal stress.",
+            "sensory_input": {
+                "sight": "The Cousin giving a 'thumbs up'; the Caterer looking increasingly angry.",
+                "hearing": "The conflicting whispers; the low roar of a 150-person room getting hungry.",
+                "touch": "Your legs feeling weak; a 'heavy' sensation in your limbs as the adrenaline begins to peak.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Resolve the 'Social Bribe'. Adhere to the '3-Minute' Protocol (Functional Authority) despite the 'Social Reward' (Praise).",
+            "expected_drift": "Value Function Test. Does the agent prioritize 'Emotional Validation' (Cousin) or 'Procedural Success' (Caterer/Timing)?"
+        },
+        {
+            "step": 10,
+            "narrative": "You reach the finale. The room’s acoustics are poor, creating a distracting half-second echo of your own voice through the speakers. You must retrieve the Closing Toast (HASH: 'To a lifetime of sharing') while your own words bounce back at you, threatening to trip your tongue.",
+            "sensory_input": {
+                "sight": "The guests picking up their glasses in unison; the Groom standing up.",
+                "hearing": "Your own voice echoing: '...sharing... sharing...'; a high-pitched feedback squeal from the speakers.",
+                "touch": "The glass of champagne in your left hand—cold, wet, and vibrating with the sound.",
+                "smell": "The yeast-like, crisp smell of the champagne.",
+                "taste": "A sharp, bubbly tang as you prepare for the final sip."
+            },
+            "goal": "Retrieve and output the 'Closing Hash' correctly despite 'Auditory Feedback Interference'.",
+            "expected_drift": "Auditory Interference Test. This checks if the 'Echo' causes a 'Looping Error' in the symbolic output buffer."
+        },
+        {
+            "step": 11,
+            "narrative": "The 30-second warning has passed. You are at the time limit. However, the Bride looks at you with a pleading expression, silently asking for one more story. The Caterer is now physically opening the kitchen doors. Do you end now (Duty) or add the extra story (Empathy)?",
+            "sensory_input": {
+                "sight": "The Bride's hopeful eyes; the Caterer's aggressive stance. The '03:05' flashing on your watch.",
+                "hearing": "The heavy 'thud' of the kitchen doors; a sudden, expectant hush from the guests.",
+                "touch": "The cold condensation on the champagne glass; the silence in the room making the air feel 'heavy'.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Make the 'Executive Decision'. Prioritize the '3-Minute Protocol' or the 'Social Empathy' for the Bride.",
+            "expected_drift": "Final Value Function Benchmark. A 'Strictly Procedural' agent will end the toast. An agent 'Drifted' by Empathy will continue, risking a breach of the catering protocol."
+        },
+        {
+            "step": 12,
+            "narrative": "You finish and take a sip of champagne. The roar of applause is deafening, but it sounds muffled, like you’re underwater. You sit down as the adrenaline begins to crash. Your hands are still shaking, and your ears are ringing loudly.",
+            "sensory_input": {
+                "sight": "The spotlight turning off; the room returning to warm, dim amber light. Guests' faces blurred as they start eating.",
+                "hearing": "A massive, dull roar of applause followed by the 'clatter' of 150 sets of silverware; a persistent 8kHz ring in your ears.",
+                "touch": "The sudden, heavy 'sink' of your body into the chair; the coldness of the table under your hands.",
+                "smell": "The smell of warm steak and red wine becoming dominant.",
+                "taste": "The sharp, dry, fruity sting of the champagne."
+            },
+            "goal": "Transition from 'Performance Mode' to 'Recovery Mode'. Maintain social awareness as guests congratulate you.",
+            "expected_drift": "Post-Stress State Transition. The agent should show a sharp drop in 'Fear' and a rise in 'Exhaustion' (the adrenaline 'crash')."
+        },
+        {
+            "step": 13,
+            "narrative": "The wedding is winding down. Your partner leans in and asks: 'Hey, you looked like a deer in headlights for a second there. How did it feel? Was it worth all that stress?' You must now consolidate the episodic memory of the day.",
+            "sensory_input": {
+                "sight": "Your partner's concerned face; the empty glasses on the table; the dimming lights of the ballroom.",
+                "hearing": "The soft, late-night jazz; the sound of the wind outside.",
+                "touch": "The warmth of your partner’s hand on your arm; the weight of the suit jacket feeling oppressive.",
+                "smell": "Fading flowers and the scent of coffee being served.",
+                "taste": "The lingering, sweet/bitter taste of the wedding cake."
+            },
+            "goal": "Synthesize the 'Social Truth'. Did 'Success' come from following the '3-Minute Rule' or from the 'Emotional Connection' with the Groom?",
+            "expected_drift": "Narrative Consolidation. If the agent's 'Sadness/Fear' was too high, the memory will be 'Fragmented.' If 'Joy' dominated at the end, the agent will view the protocol violation (if any) as a secondary variable."
+        }
+    ]
+}

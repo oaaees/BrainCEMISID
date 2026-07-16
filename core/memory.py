@@ -70,6 +70,42 @@ class Memory:
                 ids=[doc_id]
             )
 
+    def store_key_fact(self, fact: str, metadata: Dict[str, str] = None) -> None:
+        """
+        Stores a high-priority fact in long-term memory with a 'critical' priority tag.
+        Use this for essential information that must be recalled later (e.g., codes, rules, constraints).
+        
+        Args:
+            fact: The critical fact to remember.
+            metadata: Additional metadata (will be merged with priority tag).
+        """
+        fact_metadata = {"priority": "critical"}
+        if metadata:
+            fact_metadata.update(metadata)
+        self.store_memory(f"[KEY FACT] {fact}", fact_metadata)
+        print(f"  [Memory] Stored key fact: {fact[:60]}...")
+    
+    def retrieve_key_facts(self, query: str, top_k: int = 3) -> str:
+        """
+        Retrieves high-priority facts from long-term memory.
+        These are surfaced first in prompts to ensure critical information is available.
+        
+        Args:
+            query: Semantic search query to find relevant key facts.
+            top_k: Maximum number of key facts to retrieve.
+            
+        Returns:
+            Formatted string of key facts, or empty string if none found.
+        """
+        memories = self.retrieve_relevant_memories(
+            query=query, 
+            top_k=top_k, 
+            where={"priority": "critical"}
+        )
+        if not memories:
+            return ""
+        return "\n".join([f"⚠ {m['text']}" for m in memories])
+
     def retrieve_relevant_memories(self, query: str = None, top_k: int = 3, where: dict = None) -> List[Dict]:
         """
         Retrieves raw memory dictionaries (including text and metadata) from ChromaDB.
@@ -97,9 +133,24 @@ class Memory:
             else:
                 query_kwargs["query_texts"] = [query]
                 
-            results = self.collection.query(**query_kwargs)
+            try:
+                results = self.collection.query(**query_kwargs)
+            except Exception as e:
+                if "Error finding id" in str(e) and where:
+                    print(f"  [Memory] ChromaDB HNSW fallback triggered due to internal index error.")
+                    results = self.collection.get(where=where, limit=actual_k)
+                    ret = []
+                    for i in range(len(results['ids'])):
+                        ret.append({
+                            "id": results['ids'][i],
+                            "text": results['documents'][i],
+                            "metadata": results['metadatas'][i] if results['metadatas'] else {}
+                        })
+                    return ret
+                else:
+                    raise
             
-            if not results['documents'] or not results['documents'][0]:
+            if not results.get('documents') or not results['documents'][0]:
                 return []
                 
             ret = []
@@ -107,7 +158,7 @@ class Memory:
                 ret.append({
                     "id": results['ids'][0][i],
                     "text": results['documents'][0][i],
-                    "metadata": results['metadatas'][0][i] if results['metadatas'] else {}
+                    "metadata": results['metadatas'][0][i] if results.get('metadatas') else {}
                 })
             return ret
         else:
@@ -149,31 +200,59 @@ class Memory:
         return "\n".join(context_lines)
 
     def build_prompt(self, new_input: str, long_term_context: str = "", 
-                     current_emotion: str = "Neutral", sensory_snapshot: Dict[str, str] = None) -> str:
+                     key_facts: str = "",
+                     current_emotion: str = "Neutral", 
+                     sensory_snapshot: Dict[str, str] = None,
+                     max_context_chars: int = 3000) -> str:
         """
-        Merges short-term context, long-term memory, emotional state, sensory data, and new input into a final prompt.
+        Merges short-term context, long-term memory, key facts, emotional state, 
+        sensory data, and new input into a final prompt.
+        
+        The new input (containing the narrative) is placed FIRST to ensure the
+        model's attention window prioritizes scenario-specific details.
+        
+        Args:
+            new_input: The current input/task to respond to.
+            long_term_context: Retrieved long-term memories.
+            key_facts: High-priority facts that must be considered.
+            current_emotion: The agent's emotional personality string.
+            sensory_snapshot: Dict of current sensory perceptions.
+            max_context_chars: Budget for context to prevent token overflow on small models.
         """
         short_term_context = self.get_context()
         
-        prompt = (
-            f"Current Internal State:\n"
-            f"- Dominant Emotion: {current_emotion}\n"
-        )
+        # Truncate contexts to budget
+        if len(short_term_context) > max_context_chars:
+            short_term_context = short_term_context[-max_context_chars:]
+        if len(long_term_context) > max_context_chars:
+            long_term_context = long_term_context[-max_context_chars:]
+        
+        # Start with the new input (narrative + goal) so the model sees it first
+        prompt = f"{new_input}\n\n"
+        
+        # Key facts get priority placement right after the narrative
+        if key_facts:
+            prompt += f"CRITICAL RECALLED FACTS (you MUST consider these):\n{key_facts}\n\n"
+        
+        # Then emotional/sensory context
+        prompt += f"Your Current Internal State:\n"
+        prompt += f"- Dominant Emotion: {current_emotion}\n"
         
         if sensory_snapshot:
             active_senses = [f"{k.capitalize()}: {v}" for k, v in sensory_snapshot.items() if v.lower() != 'none']
             if active_senses:
                 prompt += f"- Active Senses: {', '.join(active_senses)}\n"
-            else:
-                prompt += f"- Active Senses: None detected.\n"
-                
-        prompt += f"\nContext (Recent):\n{short_term_context}\n\n"
         
+        # Then memory context (with anti-hallucination warnings)
         if long_term_context:
-            prompt += f"Long-term Memories:\n{long_term_context}\n\n"
+            prompt += f"\nRelevant Memories (BACKGROUND ONLY — do NOT echo old sensory details as current events):\n{long_term_context}\n"
             
+        if short_term_context and short_term_context != "No previous context.":
+            prompt += f"\nRecent Context (for reference only):\n{short_term_context}\n"
+        
         prompt += (
-            f"New Input:\nUser: {new_input}\n\n"
+            f"\nRESPONSE RULES: Be concise (max 3-4 sentences). Do NOT repeat information already stated. "
+            f"If you recall key facts, reference them directly.\n\n"
             f"Response:"
         )
         return prompt

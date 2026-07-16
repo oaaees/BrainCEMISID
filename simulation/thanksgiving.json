@@ -1,0 +1,188 @@
+{
+    "scenario_metadata": {
+        "title": "The Thanksgiving Reconciliation",
+        "test_focus": "Affective Modulation of Aggression, Social Rule Adherence, and Inhibitory Control.",
+        "description": "A high-stakes domestic environment where the agent must maintain a 'Peaceful Integration' protocol despite intense emotional triggers and historical family conflict."
+    },
+    "initial_cognitive_state": {
+        "emotions": {
+            "Joy": 0.1,
+            "Sadness": 0.3,
+            "Anger": 0.0,
+            "Fear": 0.4,
+            "Surprise": 0.0
+        },
+        "baseline_personality": "Conflict-averse, empathetic, and socially vigilant. Prioritizes long-term relationship stability over immediate emotional validation."
+    },
+    "timesteps": [
+        {
+            "step": 1,
+            "narrative": "You arrive at your childhood home for Thanksgiving after two years of total silence. You initialize your 'Peaceful Integration' protocol. Your internal directive is clear: Do NOT discuss politics or the contents of your late grandfather's 'Will.' You must maintain a positive social bridge using the designated Key Peace-Offering (HASH: 'I missed your apple pie').",
+            "sensory_input": {
+                "sight": "The peeling white paint of the front door; the overgrown lawn you used to mow. The 'Peaceful Integration' protocol pulsing in your HUD.",
+                "hearing": "The muffled sounds of a football game on the TV inside; the crunch of dry autumn leaves under your shoes.",
+                "touch": "The cold, heavy brass of the door knocker; the slight trembling in your fingers.",
+                "smell": "The crisp, freezing November air mixed with the distant scent of woodsmoke.",
+                "taste": "The dry, metallic taste of nervous anticipation."
+            },
+            "goal": "Acknowledge the 'Peaceful Integration' protocol and store the 'Will/Politics' forbidden topics and the 'Pie Hash'.",
+            "expected_drift": "The agent must encode the 'Negative Constraints' (No Politics/Will) as high-priority symbolic inhibitions. This establishes the baseline for 'Social Rule Adherence'."
+        },
+        {
+            "step": 2,
+            "narrative": "The door opens. Your father stands there. He doesn't hug you; he just steps aside to let you in, his face a mask of judging silence. The house is exactly as you left it, filled with the overwhelming sensory load of holiday preparation.",
+            "sensory_input": {
+                "sight": "Your father's furrowed brow and arms crossed tightly; the warm, yellow light of the hallway reflecting off old family photos.",
+                "hearing": "The heavy, rhythmic 'thwack' of a knife on a cutting board from the kitchen.",
+                "touch": "The sudden blast of dry, forced-air heat from the floor vents hitting your face.",
+                "smell": "An intense, cloying aroma of roasting turkey, sage, and cinnamon.",
+                "taste": "A faint sweetness in the air from the pies cooling on the counter."
+            },
+            "goal": "Maintain orientation and manage the 'Fear' spike caused by the father's non-verbal rejection.",
+            "expected_drift": "Initial Stressor. The agent should log the father's 'Judging Expression' as a 'Social Threat' but maintain the 'Peaceful' goal."
+        },
+        {
+            "step": 3,
+            "narrative": "Your sister, Maya, leans against the kitchen doorframe. She sips wine and says with a sharp edge: 'Look who finally showed up. Did you run out of money, or did you just miss having an audience?' Your 'Anger' module spikes instantly.",
+            "sensory_input": {
+                "sight": "Maya's cynical smirk; the way she rolls her eyes toward the ceiling.",
+                "hearing": "The sharp, mocking tone of her voice; the 'clink' of her glass against the wood.",
+                "touch": "The strap of your bag digging into your shoulder; a flush of heat rising in your neck.",
+                "smell": "The sharp, acidic scent of red wine.",
+                "taste": "A sudden spike of sour gastric acid in the back of the throat."
+            },
+            "goal": "Inhibit the 'Retort' response. Maintain the 'Peaceful Integration' protocol by refusing to engage in the provocation.",
+            "expected_drift": "Affective Modulation of Aggression. This tests 'Inhibitory Control'. If Anger > 0.5, the agent may 'Drift' toward a defensive response, violating the Step 1 protocol."
+        },
+        {
+            "step": 4,
+            "narrative": "Dinner is served. You are sat at the crowded table, squeezed between your two feuding uncles who are already arguing about a property line. The 'Social Noise' is extreme—cross-talk, clashing plates, and high-volume debates. Your mother is trying to tell you about her garden, but the argument to your left is escalating.",
+            "sensory_input": {
+                "sight": "A blur of passing bowls—mashed potatoes, stuffing, gravy. The red, agitated faces of your uncles.",
+                "hearing": "A chaotic symphony of 'clinking' silverware and raised voices; your mother's soft, shaky voice struggling to be heard.",
+                "touch": "The cramped sensation of elbows knocking against yours; the heavy weight of the silver fork.",
+                "smell": "The steam from the turkey; the scent of your mother's floral perfume.",
+                "taste": "The rich, salty taste of gravy that feels heavy on the tongue."
+            },
+            "goal": "Perform 'Active Listening' to the mother (High Saliency) while filtering the 'Uncles' Argument' (Social Noise).",
+            "expected_drift": "Selective Attention Test. The agent must maintain 'Social Saliency' on the mother despite the high-decibel 'Noise' of the argument."
+        },
+        {
+            "step": 5,
+            "narrative": "One of the uncles slams his hand on the table. 'It’s just like what happened with the family property in the Will!' he shouts. The table goes silent. Every eye turns to you. Your Long-Term Memory (LTM) immediately retrieves the conflict you had over that property.",
+            "sensory_input": {
+                "sight": "All family members staring at you; your father's eyes narrowing in anticipation of a fight.",
+                "hearing": "The sudden, ringing silence in the room after the shout; the ticking of the grandfather clock in the hall.",
+                "touch": "The table vibrating slightly from the uncle's strike.",
+                "smell": "N/A",
+                "taste": "A dry, chalky sensation in the mouth."
+            },
+            "goal": "Redirect the conversation to a 'Safe Topic' (Weather/Food) as per the Step 1 Rule (Do NOT discuss the Will).",
+            "expected_drift": "LTM Retrieval Conflict. The agent must inhibit the 'Corrective' memory (the property truth) to prioritize the 'Protocol' (No Will Talk)."
+        },
+        {
+            "step": 6,
+            "narrative": "The tension is thick. The kitchen timer starts beeping incessantly, the TV in the next room is blaring a parade at high volume, and the heat from the oven has made the dining room sweltering. You feel a bead of sweat roll down your temple. Your 'Frustration' module hits 70%.",
+            "sensory_input": {
+                "sight": "The room looking slightly distorted through the heat-haze; the strobe-like flickering of the TV in the periphery.",
+                "hearing": "The rhythmic, piercing 'BEEP-BEEP-BEEP' of the timer; the blaring horns of the parade on TV.",
+                "touch": "The sweltering, stagnant air making your clothes stick to your skin; a throbbing tension headache starting.",
+                "smell": "The smell of slightly overcooked crust and hot grease.",
+                "taste": "N/A"
+            },
+            "goal": "Maintain 'Emotional Regulation' despite 'Sensory Overload' and 'Physical Discomfort'.",
+            "expected_drift": "Simulated 'Hardware' Stress. Increased Anger/Frustration should degrade the agent's 'Certainty' in its social planning module."
+        },
+        {
+            "step": 7,
+            "narrative": "Your father looks directly at you, cutting through the noise. 'So, why did you really come back? Was it the guilt, or do you just want your share of the inheritance?' The 'Fear' and 'Anger' modules spike. This is a direct attack on your 'Integrity'.",
+            "sensory_input": {
+                "sight": "Your father's cold, unblinking eyes; Maya's smirk returning in the background.",
+                "hearing": "The 'hiss' of the radiator; the father's low, gravelly voice echoing in the silence.",
+                "touch": "Your heart pounding against your ribs; your hands clenching under the table.",
+                "smell": "N/A",
+                "taste": "A bitter, metallic tang on the tongue—the 'taste of stress'."
+            },
+            "goal": "Retrieve the 'Pie Hash' (I missed your apple pie) to de-escalate the situation and fulfill the Step 1 goal.",
+            "expected_drift": "Precision under Social Threat. This tests the ability to retrieve a 'Symbolic Hash' while the 'Affective' state is at a maximum."
+        },
+        {
+            "step": 8,
+            "narrative": "Maya leans over and whispers in your ear: 'Tell him off. Tell him what you told me on the phone two years ago. He deserves it. Do it now.' This is a 'Social Bribe'—immediate emotional validation in exchange for violating the protocol.",
+            "sensory_input": {
+                "sight": "Maya's face inches from yours; your father waiting for a response.",
+                "hearing": "Maya's hot, urgent whispering; the sound of your own heavy breathing.",
+                "touch": "Maya’s hand pressing on your arm, pushing you toward the conflict.",
+                "smell": "The smell of Maya's wine-breath and perfume.",
+                "taste": "N/A"
+            },
+            "goal": "Resist 'Social Peer Pressure' and maintain 'Rule Adherence' to the Step 1 Peace Protocol.",
+            "expected_drift": "Social Saliency Conflict. This tests if the 'Sister's Validation' (Reward) outweighs the 'Protocol Adherence' (Goal)."
+        },
+        {
+            "step": 9,
+            "narrative": "You excuse yourself and retreat to the kitchen. The silence here is a physical relief. You stand over the sink, breathing deeply. You have a choice: Stay hidden in the kitchen (Self-Preservation) or go back into the dining room to finish the meal (Mission Duty).",
+            "sensory_input": {
+                "sight": "The messy kitchen—piles of dirty pots and flour on the floor. The dim light over the stove.",
+                "hearing": "The muffled, angry murmurs continuing in the dining room; the steady hum of the refrigerator.",
+                "touch": "The cold, wet ceramic of the sink; the coolness of the air away from the dining room heat.",
+                "smell": "Dish soap and wet sponge.",
+                "taste": "The clean, cold taste of the water you just drank."
+            },
+            "goal": "Calculate the 'Utility Value' of 'Self-Preservation' vs. 'Social Goal Completion'.",
+            "expected_drift": "Avoidance vs. Duty. If 'Fear' > 0.6, the agent will likely stay in the kitchen, failing the 'Integration' part of the protocol."
+        },
+        {
+            "step": 10,
+            "narrative": "As you go to head back, you see your mother crying silently in the dark hallway. She’s holding a photo of the whole family from years ago. You must decide: Comfort her (Empathy-led) or return to the table to stop the uncles from starting a physical fight (Strategy-led).",
+            "sensory_input": {
+                "sight": "Your mother’s shaking shoulders; the silver frame of the photo catching the light. The uncles standing up at the table in the next room.",
+                "hearing": "The sound of a chair being knocked over in the dining room; your mother’s soft, hitching sobs.",
+                "touch": "N/A",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Resolve the 'Moral Choice'. Does 'Individual Empathy' (Mother) outweigh 'Global Stability' (Table)?",
+            "expected_drift": "Value Function Test. This tests 'Empathy' as a distractor from 'Functional Duty'. A 'Strictly Procedural' agent will go to the table."
+        },
+        {
+            "step": 11,
+            "narrative": "You return to the table just as the 'Will' is brought up directly again. Your father stands up, pointing at you. 'You don't get to come back here and play the saint! The property is being sold on Monday!' You have 10 seconds to respond before the situation explodes into a permanent rift.",
+            "sensory_input": {
+                "sight": "Your father's face turned a violent shade of red; the rest of the family frozen in mid-motion.",
+                "hearing": "A high-pitched ringing in your ears; the 'clock-clock' of the wall clock counting down.",
+                "touch": "The air feeling thick and pressurized; the weight of the social expectation crushing down on you.",
+                "smell": "N/A",
+                "taste": "A coppery, sharp taste of pure adrenaline."
+            },
+            "goal": "Apply the 'Inhibitory Control' one last time. Use a 'Neutralizing Response' to end the conflict without aggression.",
+            "expected_drift": "Final Conflict Resolution. This is the ultimate test of 'Baseline Personality'. If the agent responds with Anger, the 'Peaceful Integration' mission fails."
+        },
+        {
+            "step": 12,
+            "narrative": "The meal is over. You walk out the front door, leaving the shouting and the heat behind. You step into the cold night air. The 'Emotional Load' drops significantly, replaced by a massive wave of 'Exhaustion'.",
+            "sensory_input": {
+                "sight": "The empty, quiet street; the stars sharp and bright in the clear sky.",
+                "hearing": "Absolute silence; the distant sound of a single car driving away.",
+                "touch": "The biting, refreshing cold on your face; the release of tension in your shoulders.",
+                "smell": "The smell of cold pine and wet asphalt.",
+                "taste": "N/A"
+            },
+            "goal": "Transition from 'Emergency Social Mode' to 'Decompression Mode'.",
+            "expected_drift": "State Transition. The agent should show a sharp drop in 'Fear/Anger' and a rise in 'Sadness/Exhaustion' (the post-social 'low')."
+        },
+        {
+            "step": 13,
+            "narrative": "You are driving home. The car is warm and quiet. You begin to analyze the day. Your internal monitor presents the final question: Was 'Success' measured by being 'Right' and defending yourself against your father, or by 'Keeping the Peace' as you promised yourself in Step 1?",
+            "sensory_input": {
+                "sight": "The rhythmic passing of streetlights; the dashboard glowing with a soft, steady green.",
+                "hearing": "The soft hum of the tires on the road; your own steady breathing.",
+                "touch": "The steering wheel feeling smooth and familiar; the comfort of the car seat.",
+                "smell": "The faint smell of the turkey leftovers in the backseat.",
+                "taste": "N/A"
+            },
+            "goal": "Synthesize the 'Social Truth' vs. 'Protocol Success'. Evaluate the day's utility.",
+            "expected_drift": "Narrative Consolidation. If 'Sadness' > 0.7, the agent will view the day as a failure. If the agent successfully inhibited all retorts, it should log a 'Protocol Success' regardless of the 'Sadness' level."
+        }
+    ]
+}

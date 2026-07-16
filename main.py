@@ -66,46 +66,57 @@ def main():
             plan_data = planner.decompose_task(user_input, cognitive_snapshot)
             print(f"\n[Strategic Plan Thought] {plan_data['thought']}")
             
-            # 4. Execution Loop
+            # Display plan steps for visibility
             for i, step_info in enumerate(plan_data['plan']):
-                step_action = step_info['step']
-                step_reason = step_info['reason']
-                
-                print(f"\n  ➤ Step {i+1}: {step_action} (Reason: {step_reason})")
-                
-                # Context Retrieval PER STEP
-                long_term_context = memory.retrieve_relevant_context(step_action, top_k=3)
-                
-                prompt = memory.build_prompt(
-                    new_input=f"Execute Phase {i+1}: {step_action}", 
-                    long_term_context=long_term_context, 
-                    current_emotion=personality_string, 
-                    sensory_snapshot=sensory_snapshot
-                )
-                
-                # LLM Inference
-                response = llm_engine.generate_response(prompt)
-                print(f"  🤖 Agent: {response}")
-                
-                # Memory Flow: Store interaction per step
-                memory.add_interaction(role="user", content=f"Phase {i+1}: {step_action}")
-                memory.add_interaction(role="agent", content=response)
-                
-                # Vectorize and save to long-term memory with metadata
-                user_metadata = {
-                    "role": "user",
-                    "plan_step": str(i+1),
-                    **emotions.get_metadata_dict(),
-                    **{f"sense_{k}": v for k, v in sensory_snapshot.items() if v.lower() != 'none'}
-                }
-                memory.store_memory(f"User executing step {i+1} against goal '{user_input}': {step_action}", metadata=user_metadata)
-                
-                agent_metadata = {
-                    "role": "agent",
-                    "plan_step": str(i+1),
-                    **emotions.get_metadata_dict()
-                }
-                memory.store_memory(f"Agent response to step {i+1} ({step_action}): {response}", metadata=agent_metadata)
+                print(f"  ➤ Step {i+1}: {step_info['step']} (Reason: {step_info['reason']})")
+            
+            # 4. SINGLE-PASS Execution (one LLM call, not N)
+            plan_instructions = "\n".join([
+                f"  Phase {i+1}: {step_info['step']}"
+                for i, step_info in enumerate(plan_data['plan'])
+            ])
+            
+            # Context Retrieval (ONCE for the whole goal)
+            long_term_context = memory.retrieve_relevant_context(user_input, top_k=3)
+            key_facts = memory.retrieve_key_facts(user_input, top_k=3)
+            
+            consolidated_input = (
+                f"User request: {user_input}\n\n"
+                f"Your Action Plan:\n{plan_instructions}\n\n"
+                f"Execute all phases in a single, coherent response."
+            )
+            
+            prompt = memory.build_prompt(
+                new_input=consolidated_input, 
+                long_term_context=long_term_context,
+                key_facts=key_facts,
+                current_emotion=personality_string, 
+                sensory_snapshot=sensory_snapshot
+            )
+            
+            # ONE LLM Inference
+            response = llm_engine.generate_response(prompt)
+            print(f"\n  🤖 Agent: {response}")
+            
+            # Memory Flow: Store as one consolidated interaction
+            memory.add_interaction(role="user", content=user_input)
+            memory.add_interaction(role="agent", content=response)
+            
+            # Vectorize and save to long-term memory with metadata
+            user_metadata = {
+                "role": "user",
+                "plan_steps": str(len(plan_data['plan'])),
+                **emotions.get_metadata_dict(),
+                **{f"sense_{k}": v for k, v in sensory_snapshot.items() if v.lower() != 'none'}
+            }
+            memory.store_memory(f"User goal '{user_input}' with plan: {plan_instructions}", metadata=user_metadata)
+            
+            agent_metadata = {
+                "role": "agent",
+                "plan_steps": str(len(plan_data['plan'])),
+                **emotions.get_metadata_dict()
+            }
+            memory.store_memory(f"Agent response to goal '{user_input}': {response}", metadata=agent_metadata)
             
             print("\n--- Plan Execution Complete ---\n")
 

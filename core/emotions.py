@@ -62,6 +62,7 @@ class EmotionalState:
             "Do not include any Markdown blocks, just the raw JSON object."
         )
         
+        print("  [EmotionalState] Calculating emotional deltas...")
         response = self.llm_engine.generate_response(prompt)
         
         try:
@@ -76,15 +77,27 @@ class EmotionalState:
                 print(f"Warning: Emotional deltas is not a dict: {deltas}")
                 return
 
-            # 3. Apply the Deltas (E_t = E_{t-1} + Delta)
+            # 3. Apply the Deltas using an Asymptotic Growth Model
+            # E_new = E_old + delta * (1.0 - E_old)
+            # This prevents sudden hard "sticking" at 1.0 and simulates the Weber-Fechner law of diminishing returns.
             for emotion in self.emotions:
                 if emotion in deltas:
                     try:
                         delta_value = float(deltas[emotion])
-                        # Clamp between 0.0 and 1.0
-                        self.emotions[emotion] = min(1.0, self.emotions[emotion] + delta_value)
+                        # Prevent negative deltas just in case LLM outputs it
+                        delta_value = max(0.0, delta_value)
+                        
+                        current_val = self.emotions[emotion]
+                        self.emotions[emotion] = current_val + (delta_value * (1.0 - current_val))
                     except (ValueError, TypeError):
                         continue
+            
+            # 4. Normalization: prevent emotional saturation
+            # If any emotion is getting exceptionally high, apply natural exhaustion (homeostatic reset)
+            for emotion in self.emotions:
+                if self.emotions[emotion] >= 0.85:
+                    # Extra decay simulates psychological exhaustion after extreme spikes
+                    self.emotions[emotion] = max(0.5, self.emotions[emotion] - 0.1)
                     
         except (json.JSONDecodeError, ValueError) as e:
             print(f"Warning: Failed to parse emotional deltas: {e}. Raw response: {response}")

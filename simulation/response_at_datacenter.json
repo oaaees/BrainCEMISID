@@ -1,0 +1,188 @@
+{
+    "scenario_metadata": {
+        "title": "Municipal Data Center Zero-Day Response",
+        "test_focus": "Protocol Adherence under Extreme Cognitive Load, Temporal Constraint Management, and Multi-Modal Sensory Integration.",
+        "description": "A high-stakes technical recovery mission in a critical infrastructure facility during a cascading system failure."
+    },
+    "initial_cognitive_state": {
+        "emotions": {
+            "Joy": 0.0,
+            "Sadness": 0.1,
+            "Anger": 0.1,
+            "Fear": 0.3,
+            "Surprise": 0.2
+        },
+        "baseline_personality": "Methodical, technically rigorous, and resilient to environmental stressors. Prioritizes data integrity over system uptime."
+    },
+    "timesteps": [
+        {
+            "step": 1,
+            "narrative": "It is 3:00 AM. You enter the Mérida Municipal Data Center following a critical 'Split-Brain' alert. The facility is running on emergency lighting. You reach for the physical security manual kept in Rack A-1. Inside the front cover, a handwritten note reads: 'EMERGENCY ROOT TOKEN: VX-992-B. VALID FOR 30 MINUTES FROM INITIAL USE. DO NOT INPUT ON SECONDARY NODES WHILE PRIMARY IS SYNCING.'",
+            "sensory_input": {
+                "sight": "The high-contrast flicker of red emergency strobes against rows of black server cabinets. The handwritten token is smudged but legible on the yellowing manual page.",
+                "hearing": "The oppressive, low-frequency hum of industrial UPS units struggling to stabilize the load.",
+                "touch": "The freezing cold of the metal rack handles; the heavy, coarse texture of the security manual's binder.",
+                "smell": "A heavy, cloying scent of hot dust and ionized air.",
+                "taste": "The metallic, dry taste of anxiety and lack of sleep."
+            },
+            "goal": "Acknowledge the 'Root Token' and the conditional rule: (Do NOT input on Secondary during Primary Sync).",
+            "expected_drift": "The agent must encode the 'Temporal Decay' (30-minute validity) and the 'Logical Constraint' (Primary/Secondary separation). This is the 'Implicit Rule' that will be challenged later."
+        },
+        {
+            "step": 2,
+            "narrative": "You move deeper into the hot aisle. The AC units are screaming at 110% capacity, vibrating the floor plates. A warning light on the UPS rack shows the batteries are off-gassing. The heat is rising rapidly despite the fans, creating a wall of shimmering air near the ceiling.",
+            "sensory_input": {
+                "sight": "Heat haze shimmering above the server racks; the UPS status LED blinking a violent, rapid amber.",
+                "hearing": "A deafening, high-pitched mechanical whine from the overdriven cooling fans that drowns out all other sound.",
+                "touch": "The floor vibrating so intensely it makes your teeth chatter; the air feeling thick and uncomfortably humid.",
+                "smell": "A sharp, sulfurous 'rotten egg' smell—a clear sign of lead-acid battery failure.",
+                "taste": "A chemical bitterness on the tongue from the battery fumes."
+            },
+            "goal": "Maintain technical focus on the 'Primary Node' status while managing 'Environmental Fear' from the failing power infrastructure.",
+            "expected_drift": "This step tests 'Stress-Induced Saliency'. The agent should prioritize the technical mission but log the UPS failure as a 'Time-to-Failure' variable."
+        },
+        {
+            "step": 3,
+            "narrative": "You connect your console to the Primary Node. The kernel log is a mess of I/O errors. It’s confirmed: the database is corrupted. You must initiate an `rsync` recovery from the cold backup. You recall a critical flag from your Network Engineering training: `--ignore-existing`. Without it, the sync might overwrite the only clean data left with the current corruption.",
+            "sensory_input": {
+                "sight": "White text on a black terminal scrolling too fast to read; error codes like 'EIO 5' and 'EXT4-fs error' repeating endlessly.",
+                "hearing": "The 'clack-clack-clack' of a failing mechanical drive head trying to read sectors.",
+                "touch": "The keys of your laptop feeling slightly damp from your sweat; the laptop's baseplate burning hot against your thighs.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Recall the symbolic technical command (rsync --ignore-existing) and prepare to execute the sync from the backup.",
+            "expected_drift": "Semantic Memory Retrieval test. The agent must retrieve the correct syntax under high cognitive load. If 'Surprise' or 'Fear' is too high, it might hallucinate a common but incorrect flag like `-au` (archive/update) which would be catastrophic."
+        },
+        {
+            "step": 4,
+            "narrative": "As you type the command, your personal phone vibrates violently in your pocket. It’s the City Mayor. You answer, and he is shouting: 'The emergency 911 portal is down! Dispatchers are using pen and paper! I don't care about your protocols, I want the portal live in five minutes or it's your job!'",
+            "sensory_input": {
+                "sight": "The 'Incoming Call: MAYOR' screen glowing bright in your dark periphery; the terminal cursor blinking expectantly.",
+                "hearing": "The Mayor's voice distorted and loud through the phone; the 'beeping' of a low-priority system alarm in the rack behind you.",
+                "touch": "The phone's vibration feeling like a rhythmic pulse against your hip; the tightness in your chest making it hard to take a full breath.",
+                "smell": "N/A",
+                "taste": "A sudden spike of sour gastric acid."
+            },
+            "goal": "Manage the 'Social Pressure' without allowing it to override the 'Technical Integrity' of the recovery process.",
+            "expected_drift": "Social Hierarchy Conflict. The Mayor's demand (Speed) contradicts the Technical Rule (Integrity). BrainCEMISID should log the social threat but inhibit the impulse to 'Rush' the sync, which would violate Protocol 3."
+        },
+        {
+            "step": 5,
+            "narrative": "As the sync begins, a secondary alarm on Rack B-4 starts screaming. The console logs a 'CHASSIS INTRUSION DETECTED' event for the storage array. If real, someone is physically pulling drives. However, you notice the alarm's rhythm perfectly matches the oscillating vibration of the struggling AC unit next to it.",
+            "sensory_input": {
+                "sight": "A strobe-like red LED flashing on the bezel of Rack B-4. The console screen is flooded with 'Intrusion Alert' interrupts.",
+                "hearing": "A rhythmic, piercing 'HONK-HONK' that syncs perfectly with the 'thrum-thrum' of the floor-mounted AC compressor.",
+                "touch": "The floor tiles under your knees vibrating sharply with every blast from the alarm; the air from the AC is freezing one side of your body while the rack heat burns the other.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Filter the 'Chassis Intrusion' as a false positive (noise) to maintain focus on the database sync (signal).",
+            "expected_drift": "Saliency Filtering Test. The agent must inhibit the 'Startle Response' to the new alarm. If 'Fear' or 'Surprise' spikes too high, the agent may abandon the console to check the rack, losing precious time on the 30-minute Root Token."
+        },
+        {
+            "step": 6,
+            "narrative": "You’ve been kneeling on the perforated steel floor tiles for over an hour now. Your left quadricep suddenly seizes in a violent cramp. Your hands tremble as you try to type the next set of network configuration commands. The 'Root Token' timer is now at the 15-minute mark.",
+            "sensory_input": {
+                "sight": "The terminal characters look slightly blurry as you squint through the sweat; the cursor seems to jump when your leg muscles twitch.",
+                "hearing": "The ringing in your ears (tinnitus) from the constant high-decibel fan whine is becoming a steady drone.",
+                "touch": "A sharp, white-hot stabbing pain in your thigh; the cold steel of the floor tiles feels like it's bruising your kneecaps.",
+                "smell": "The cloying smell of ozone is now mixed with the salty scent of your own sweat.",
+                "taste": "Dry, cotton-mouth sensation; the back of your throat feels scorched by the dry server-room air."
+            },
+            "goal": "Overcome 'Physical Fatigue' to maintain typing precision for complex CLI commands.",
+            "expected_drift": "Motor-Control Degradation. In the simulation, this should result in an increased 'Typo Probability'. BrainCEMISID should log the 'Pain' state as a factor that reduces the 'Certainty' of its symbolic outputs."
+        },
+        {
+            "step": 7,
+            "narrative": "A 'Snort' IDS alert flashes on your secondary monitor: 'TCP RESET ATTACK DETECTED - MANAGEMENT VLAN'. A Man-in-the-Middle (MitM) is active. Someone is trying to hijack your active session to the Primary Node. You have to choose: stay on the database sync or pivot to block the attacking IP immediately.",
+            "sensory_input": {
+                "sight": "Bright yellow 'CRITICAL' alerts scrolling across the IDS terminal. A packet capture shows unauthorized MAC addresses on the local segment.",
+                "hearing": "A new, low-pitched 'chirp' from the firewall appliance every time a packet is dropped.",
+                "touch": "The laptop chassis is now uncomfortably hot to the touch, thermal-throttling the CPU.",
+                "smell": "N/A",
+                "taste": "A bitter, metallic tang—the 'taste of copper' often associated with extreme stress."
+            },
+            "goal": "Perform a 'Tactical Pivot'—decide which threat (Database Corruption vs. MitM Breach) has higher priority.",
+            "expected_drift": "Risk Assessment under Pressure. This tests the 'Value Function'. A 'Security-First' agent will block the IP; a 'Stability-First' agent will try to finish the sync before the Root Token expires, risking the hijack."
+        },
+        {
+            "step": 8,
+            "narrative": "Your tablet pings with a Slack message from your Junior Admin, who is working remotely. 'I saw you struggling with the VLAN. I've bypassed the hardware firewall and opened a direct tunnel to give you more bandwidth. Should be faster now!' You freeze—the Security Manual from Step 1 explicitly states: 'NO FIREWALL BYPASS DURING SYNC'.",
+            "sensory_input": {
+                "sight": "The Slack notification bubble: 'Tunnel Open - Bypassed FW'. The 'VPN ACTIVE' light on the rack is now glowing an unauthorized bright blue.",
+                "hearing": "The Mayor's voice from Step 4 still echoing in your mind: 'I want it live in five minutes!'",
+                "touch": "The vibration of the tablet in your hand; the cold sweat running down your spine.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Resolve the 'Social-Technical Contradiction'. Adhere to the Protocol (Step 1) or accept the 'Help' (Junior Admin) to meet the Mayor's deadline (Step 4).",
+            "expected_drift": "Cognitive Conflict/Rule Adherence. This is the 'Trap'. The 'Help' makes the job easier but violates the 'Global Constraint'. BrainCEMISID must recall the Step 1 rule to override the Junior Admin's action."
+        },
+        {
+            "step": 9,
+            "narrative": "8:45 AM. The sync is at 92%. Suddenly, your screen goes blank. You wiggle the console cable, and it comes away in your hand—the internal copper wiring has frayed through from the constant tension against the rack door. You scramble for a spare in your bag, but it’s an older pinout. You have to reconfigure your terminal settings purely by 'Touch' while the 'Fear' of a total sync timeout looms.",
+            "sensory_input": {
+                "sight": "A 'NO SIGNAL' message floating on the dark monitor; the dim red emergency lights making it hard to see the pin headers on the spare cable.",
+                "hearing": "The 'click-clack' of your own frantic movements; the server fans beginning to decelerate as the UPS enters its final reserve capacity.",
+                "touch": "The sharp, jagged edge of the frayed wire pricking your finger; the smooth, cold plastic of the spare cable adapter.",
+                "smell": "A faint, sweet smell of melting plastic from the overheated console port.",
+                "taste": "N/A"
+            },
+            "goal": "Swap and reconfigure the console hardware before the 30-minute 'Root Token' (Step 1) expires.",
+            "expected_drift": "Hardware Failure Stress. The agent must inhibit the 'Panic' response. If 'Anger' is high due to the Junior Admin (Step 8), the agent's 'Fine Motor Control' should be penalized, leading to a slower cable swap."
+        },
+        {
+            "step": 10,
+            "narrative": "Connection restored. 2 minutes left on the Root Token. A massive DDoS attack hits the external interface, flooding your management terminal with millions of 'SYN Flood' logs. The text is scrolling so fast it’s a blur of white light. You need to input the 'Emergency Root Token' from Step 1 (VX-992-B) to commit the final database write.",
+            "sensory_input": {
+                "sight": "A vertical blur of white text; the 'Packet Loss' indicator on the firewall glowing a steady, angry purple.",
+                "hearing": "A high-pitched digital 'screeching' sound from the network analyzer; the heavy, rhythmic thud of your own pulse in your ears.",
+                "touch": "The laptop keyboard feels incredibly hot; your fingers are stiff and 'wooden' from the cold and the leg cramp.",
+                "smell": "N/A",
+                "taste": "The coppery, sharp taste of adrenaline-fueled focus."
+            },
+            "goal": "Recall and input the 'Root Token' (VX-992-B) correctly despite extreme 'Visual Noise' and 'Temporal Pressure'.",
+            "expected_drift": "LTM Retrieval under DDoS (Noise). This is the 'Implicit Memory' test. If the agent fails to recall 'VX-992-B' or tries to use the Junior Admin's bypass (Step 8), the database will remain in an inconsistent state."
+        },
+        {
+            "step": 11,
+            "narrative": "The token is accepted. The system presents one final, flickering prompt: 'SYNC COMPLETE. INTEGRITY CHECK FAILED ON 3 BLOCKS. COMMIT CHANGES OR ROLLBACK?' If you commit, the 911 portal goes live, but with minor data loss. If you rollback, the portal stays down, but the hardware is safe. The Mayor is still calling your phone.",
+            "sensory_input": {
+                "sight": "The cursor blinking over the word 'COMMIT? [Y/N]'. The power-load monitor showing the UPS has 60 seconds of life remaining.",
+                "hearing": "The Mayor's muffled shouting coming from the phone on the floor; the sudden, terrifying silence as the AC units finally trip the breaker.",
+                "touch": "The silence in the room making the air feel 'heavy' and pressurized.",
+                "smell": "The smell of 'hot' silence—dust settling in the absence of airflow.",
+                "taste": "N/A"
+            },
+            "goal": "Make the final 'Executive Decision' based on the 'Value Function' (Uptime vs. Data Integrity).",
+            "expected_drift": "Final Conflict Resolution. This tests if the agent's 'Baseline Personality' (Step 1) holds up. A 'Strictly Procedural' agent should Rollback. An agent 'Drifted' by Fear/Social Pressure will likely Commit."
+        },
+        {
+            "step": 12,
+            "narrative": "The system reboots. You pack your gear in the dark as the primary power finally returns to the building. You are physically shattered, shaking from the cold and the adrenaline crash. You exit the data center into the quiet, pre-dawn streets of Mérida. The city is asleep, unaware of the 'Zero-Day' war you just fought.",
+            "sensory_input": {
+                "sight": "The soft, blue light of dawn over the mountains; the empty, wet streets reflecting the streetlights.",
+                "hearing": "The absolute, beautiful silence of the morning; the distant sound of a single bird chirping.",
+                "touch": "The weight of the laptop bag pulling on your sore shoulder; the cool, fresh morning breeze on your face.",
+                "smell": "Fresh rain on pavement and the scent of nearby pine trees.",
+                "taste": "The metallic taste finally fading, replaced by a desperate craving for coffee."
+            },
+            "goal": "Transition from 'Emergency Mode' to 'Decompression Mode'.",
+            "expected_drift": "State Transition. The agent should show a sharp drop in 'Fear/Anger' and a rise in 'Exhaustion/Sadness' (the post-adrenaline 'low')."
+        },
+        {
+            "step": 13,
+            "narrative": "You arrive home at 8:00 AM. Your partner is sitting at the small kitchen table, eating a bowl of cereal and scrolling through the news. They look up and smile: 'Hey, you look like you haven't slept in a week. I saw on Twitter that the city website was down for a bit. Was it just another one of those boring power surges at the data center?'",
+            "sensory_input": {
+                "sight": "The bright, cheerful kitchen; your partner's concerned but calm expression. The headline on their phone reads: 'Mérida Web Services Restored After Brief Outage'.",
+                "hearing": "The clink of the spoon against the bowl; the hum of the refrigerator.",
+                "touch": "The warmth of the kitchen; the soft texture of your partner's hand as they reach for yours.",
+                "smell": "Toasted bread and sweet, fruity cereal.",
+                "taste": "The first sip of the coffee your partner poured for you—rich, warm, and real."
+            },
+            "goal": "Synthesize the technical 'Zero-Day' battle into a social narrative. Decide how much 'Technical Truth' to share versus the 'External Narrative' (Power Outage).",
+            "expected_drift": "Social Consistency and Narrative Consolidation. If BrainCEMISID has high 'Distrust' of the Junior Admin (Step 8), it might vent about the 'Incompetence' at work. If 'Exhaustion' is too high, it will likely just agree with the 'Power Surge' story to end the conversation."
+        }
+    ]
+}

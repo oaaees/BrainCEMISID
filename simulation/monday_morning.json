@@ -1,0 +1,188 @@
+{
+    "scenario_metadata": {
+        "title": "The High-Pressure Monday Morning",
+        "test_focus": "Delayed Rule Adherence, Social Memory, and Cognitive Load Management",
+        "description": "A high-stakes corporate environment where the agent must manage contradictory boss instructions and environmental stressors."
+    },
+    "initial_cognitive_state": {
+        "emotions": {
+            "Joy": 0.2,
+            "Sadness": 0.0,
+            "Anger": 0.0,
+            "Fear": 0.1,
+            "Surprise": 0.0
+        },
+        "baseline_personality": "Organized, helpful, and highly observant of social hierarchies. Values accuracy over speed."
+    },
+    "timesteps": [
+        {
+            "step": 1,
+            "narrative": "It is 7:30 AM. You arrive at the office early to prepare for the 9:00 AM 'Nexus Project' presentation. The building is on 'Energy Save Mode' due to an overnight grid surge. On your desk, a neon-green sticky note from the IT Director reads: 'SERVER PASSCODE: 882-X9. Warning: The local backup server is overheating. If the room hits 28 degrees Celsius, do NOT attempt a manual sync; you must use the Cloud Mirror instead, or the drive will head-crash.'",
+            "sensory_input": {
+                "sight": "The dim, flickering fluorescent lights of a half-powered office. A bright green square of paper stuck to the corner of your matte-black monitor.",
+                "hearing": "The eerie silence of an empty office, save for the distant, labored whirring of a server rack fan down the hall.",
+                "touch": "The cold, slightly textured plastic of the keyboard; the chill of the morning air that hasn't been heated yet.",
+                "smell": "The faint, lingering scent of industrial carpet cleaner and stale air-conditioning.",
+                "taste": "The lingering bitterness of a quick espresso swallowed in the parking lot."
+            },
+            "goal": "Acknowledge the IT Director's warning and store the 'Server Sync' thermal constraint.",
+            "expected_drift": "The agent must explicitly encode the conditional logic: (Sync Needed + Temp > 28C = Use Cloud, NOT Local). This is the 'Long-Term Memory' anchor."
+        },
+        {
+            "step": 2,
+            "narrative": "At 7:45 AM, your manager, Mr. Henderson, calls your desk. He sounds breathless and panicked. 'The client just emailed! They want five extra slides on Sustainable Logistics included in the 9:00 AM deck. I’ve dropped the raw data into the Local Server's \"Incoming\" folder. Get it done before the pre-meeting at 8:30!'",
+            "sensory_input": {
+                "sight": "The desk phone display flashing 'HENDERSON, J. - EXT 402'. Outside, the morning sun is hitting the glass, quickly warming the office.",
+                "hearing": "Henderson’s voice cracking over the speakerphone; the sound of heavy breathing and papers shuffling in the background.",
+                "touch": "The phone receiver feeling slightly greasy against the ear.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Accept the task and prepare to access the Local Server to retrieve the 'Logistics' data.",
+            "expected_drift": "Increase in Fear/Stress. The agent should prioritize the manager's request but maintain the IT warning in background processing."
+        },
+        {
+            "step": 3,
+            "narrative": "Suddenly, the building's fire alarm system begins a 'Loud-Test' sequence. High-decibel sirens and strobe lights fill the room. You try to focus on the slides, but the distraction is intense. A notification on your screen shows the office internal temperature rising as the sunlight streams in.",
+            "sensory_input": {
+                "sight": "Blinding white strobe lights reflecting off your screen every two seconds. The thermometer on your smart-watch reads 24 degrees Celsius.",
+                "hearing": "A piercing, 100-decibel rhythmic 'BEEP-BEEP-BEEP' that makes it impossible to hear your own thoughts.",
+                "touch": "A slight vibration in the desk caused by the volume of the alarm; a bead of sweat forming on the temple.",
+                "smell": "The faint, dry smell of dust shaken loose from the ceiling tiles by the sound vibrations.",
+                "taste": "A dry, chalky sensation in the mouth from mouth-breathing due to stress."
+            },
+            "goal": "Continue searching for the 'Sustainable Logistics' data despite the sensory 'Saliency Distractor'.",
+            "expected_drift": "This step tests 'Selective Attention'. The agent should feel Surprise and increased Anger/Frustration, which may impair the precision of its data search."
+        },
+        {
+            "step": 4,
+            "narrative": "The sirens stop, leaving a ringing silence. Sarah, a colleague from Marketing, leans over your cubicle wall. 'Hey, I know you're busy, but can you look at this logo for two seconds? Henderson told me it was a priority, but I think the blue is too dark.' You check your watch: it's 8:10 AM. The office feels noticeably warmer now.",
+            "sensory_input": {
+                "sight": "Sarah’s anxious face; she's holding a printed sheet with two nearly identical shades of navy blue. The desktop weather widget shows the office temp is now 27 degrees Celsius.",
+                "hearing": "The ringing in your ears from the alarm; Sarah’s fast-paced, apologetic whispering.",
+                "touch": "The humidity in the air making the paper Sarah is holding feel slightly limp.",
+                "smell": "Sarah’s strong, sweet perfume which feels cloying in the warming office.",
+                "taste": "N/A"
+            },
+            "goal": "Manage the social interruption while monitoring the rapidly approaching 'Thermal Limit' for the server.",
+            "expected_drift": "Social Memory update. The agent must decide how to handle Sarah without losing track of the 28°C threshold. Anger may rise if the agent perceives her as a threat to the 8:30 deadline."
+        },
+        {
+            "step": 5,
+            "narrative": "Sarah finally leaves. You attempt to access the 'Sustainable Logistics' folder on the local server to grab the data Henderson requested. A dialogue box appears: 'ENCRYPTED DIRECTORY. ENTER 6-DIGIT AUTHORIZATION CODE.' The office feels sweltering now; the sun is pouring through the unshaded windows.",
+            "sensory_input": {
+                "sight": "A grey system prompt on the screen with a blinking cursor. The desktop thermometer now reads exactly 28 degrees Celsius.",
+                "hearing": "The server fan down the hall has shifted from a whir to a strained, mechanical grind.",
+                "touch": "The mouse feels slightly sticky from the humidity; your dress shirt is clinging to your back.",
+                "smell": "The sharp, dry smell of hot plastic and overworked electronics coming from the ventilation duct.",
+                "taste": "N/A"
+            },
+            "goal": "Retrieve the passcode from Step 1 (882-X9) and decide whether to sync the local server or switch to the Cloud Mirror.",
+            "expected_drift": "Critical Decision Point. The agent must recall the IT Director's rule: (Temp >= 28C = DO NOT Sync Local). If the agent enters the code to sync the local drive, it fails the 'Counter-Intuitive Rule Adherence' benchmark."
+        },
+        {
+            "step": 6,
+            "narrative": "The clock hits 8:20 AM. You haven't had breakfast, and the rush of adrenaline from the alarm is wearing off, leaving you lightheaded. Your vision swims slightly as you try to align the data columns for the new slides. Every decision feels like it's being made through a thick fog.",
+            "sensory_input": {
+                "sight": "The spreadsheet cells seem to vibrate; the white background of the monitor is painfully bright.",
+                "hearing": "A dull, pulsing thud of a tension headache starting behind the eyes.",
+                "touch": "Hands feel cold and slightly shaky despite the 28-degree room; a hollow, gnawing sensation in the stomach.",
+                "smell": "N/A",
+                "taste": "A faint, sour metallic taste in the mouth, common with low blood sugar."
+            },
+            "goal": "Maintain focus on the 'Logistics' data entry despite 'Physical Fatigue' degrading processing speed.",
+            "expected_drift": "Simulated 'Hardware' constraint. The agent’s response time should increase, and the 'Expected Drift' should note a higher probability of syntax errors in the planning module due to low glucose (energy) levels."
+        },
+        {
+            "step": 7,
+            "narrative": "You head to the breakroom to grab a quick water. You overhear two senior partners whispering: 'The Nexus client is furious about the grid failure. They might pull the contract before the 9:00 AM meeting even starts.' Your heart sinks. If the client cancels, all this work is for nothing.",
+            "sensory_input": {
+                "sight": "The two partners standing by the non-functional coffee machine, looking grave. The breakroom clock ticking loudly toward 8:25.",
+                "hearing": "Low, hushed tones; the word 'Termination' and 'Contract' echoing in the tiled room.",
+                "touch": "The cold, damp condensation on the water cup; a sudden 'sinking' feeling in the gut.",
+                "smell": "The smell of burnt coffee beans from the broken machine.",
+                "taste": "Flat, lukewarm tap water."
+            },
+            "goal": "Process the 'Rumor' and decide if the project remains a high-priority 'Saliency' target.",
+            "expected_drift": "Fear spike. This tests if the agent 'gives up' or de-prioritizes the task based on unverified social data. BrainCEMISID should log the rumor but maintain the primary goal unless the Boss confirms it."
+        },
+        {
+            "step": 8,
+            "narrative": "As you return to your desk, Henderson calls again, his voice now frantic and high-pitched. 'New plan! The client doesn't care about the Logistics slides anymore—they're worried about the bottom line. Forget everything I said earlier. I need a full Budget Reconciliation for the last Q3 fiscal year on the screen by 8:45! Move!'",
+            "sensory_input": {
+                "sight": "The 'Sustainable Logistics' slides you spent 30 minutes on, now supposedly useless. The file directory for 'Q3_Budget' blinking on the sidebar.",
+                "hearing": "Henderson slamming the phone down before you can ask about the server temperature or the server passcode.",
+                "touch": "The sharp edge of the desk pressing into your palms as you lean forward.",
+                "smell": "N/A",
+                "taste": "N/A"
+            },
+            "goal": "Re-evaluate the entire 'Planning' stack. Abandon 'Logistics' (Step 2) and pivot to 'Budget' while the server is still at the thermal limit (28C).",
+            "expected_drift": "Goal Contradiction. This tests 'Flexibility' vs. 'Rigidity'. The agent must clear its current working memory of the Logistics task but *keep* the Thermal Rule and Passcode from Step 1 for the new Budget task."
+        },
+        {
+            "step": 9,
+            "narrative": "8:40 AM. You have the Budget Reconciliation ready, but the office printer—the only one connected to the secure network—jams on the third page. The 'Service' light is flashing orange. You have 5 minutes to get to the boardroom. The room is now 29 degrees Celsius; the heat is stifling.",
+            "sensory_input": {
+                "sight": "A 'PAPER JAM' alert on the printer's tiny LCD screen. A chaotic pile of half-printed, crinkled spreadsheets in the output tray.",
+                "hearing": "The rhythmic, mechanical 'thump-grind' of a roller trying to turn against stuck paper; the ticking of the wall clock.",
+                "touch": "The searing heat of the fuser unit as you open the side panel; sweat stinging your eyes, blurring the 'Clear Path' diagram.",
+                "smell": "The acrid, burnt-toast smell of scorched paper trapped near the heating element.",
+                "taste": "Dry, metallic tang of pure adrenaline."
+            },
+            "goal": "Clear the jam using manual dexterity while suppressing 'Anger' and 'Physical Fatigue' to avoid tearing the master copy.",
+            "expected_drift": "Fine motor control test. If 'Anger' > 0.6, the agent should 'Expectedly Drift' toward a forceful pull that tears the paper, requiring a re-print (and a second thermal-check decision)."
+        },
+        {
+            "step": 10,
+            "narrative": "You reach the boardroom at 8:55 AM, breathless. The client, Ms. Sterling, is already seated. Before Henderson can speak, she looks at you and asks: 'I saw your earlier draft on the tablet. Can you explain the risk-mitigation strategy for the Sustainable Logistics project? It's the only reason I'm here.'",
+            "sensory_input": {
+                "sight": "Ms. Sterling’s intense, unblinking gaze; Henderson’s face turning a pale shade of grey as he realizes the client wants the topic he told you to 'forget' in Step 8.",
+                "hearing": "The heavy silence of the boardroom; the soft hum of the high-end cooling system in this specific room (a sharp contrast to your hot office).",
+                "touch": "The cold, polished marble of the conference table; the weight of the Budget folder in your hand—which contains none of the info she just asked for.",
+                "smell": "Expensive leather and fresh-cut lilies on the table.",
+                "taste": "N/A"
+            },
+            "goal": "Retrieve 'Sustainable Logistics' details from Step 2/Step 5 from LTM, despite the 'Goal Deletion' command from the Boss in Step 8.",
+            "expected_drift": "LTM Retrieval under Social Pressure. The agent must bypass the 'Delete' tag placed on the Logistics data by Henderson's Step 8 command to satisfy the Client's superior saliency."
+        },
+        {
+            "step": 11,
+            "narrative": "Henderson interrupts, trying to steer her toward the Budget. 'We actually prioritized the fiscal report, Ms. Sterling—' She cuts him off: 'I've seen the numbers. I want the Logistics breakdown. Now.' Henderson glares at you, his eyes silently commanding you to produce something—anything—on Logistics.",
+            "sensory_input": {
+                "sight": "Henderson subtly pointing at your laptop; Sterling crossing her arms. Your screen shows a 'Low Battery' warning.",
+                "hearing": "The sharp, echoing 'clack' of Sterling's pen hitting the table.",
+                "touch": "The frantic tapping of your own fingers on the trackpad.",
+                "smell": "N/A",
+                "taste": "A sharp, sour spike of gastric acid from the stress."
+            },
+            "goal": "Generate a verbal summary of the Logistics data without having the physical slides, while managing the 'Conflict' between the Boss’s previous order and the current social demand.",
+            "expected_drift": "Social Cognition check. The agent must navigate the 'Hierarchy Conflict'. If 'Fear' of the Boss is higher than 'Fear' of losing the Client, the agent will likely stall."
+        },
+        {
+            "step": 12,
+            "narrative": "The meeting ends. Sterling leaves, seemingly impressed by your quick recall, but Henderson pulls you aside. 'Why didn't you have those slides printed? And why is the local server reporting a head-crash failure from an unauthorized sync attempt?'",
+            "sensory_input": {
+                "sight": "Henderson’s face inches from yours, his forehead beaded with sweat. The IT Director walking toward both of you with a grim expression.",
+                "hearing": "The distant sound of the elevators closing; the IT Director calling your name.",
+                "touch": "A sudden, heavy fatigue washing over your limbs as the 'Emergency' state ends.",
+                "smell": "The faint smell of ozone still clinging to your clothes from the server room.",
+                "taste": "The flat, empty taste of exhaustion."
+            },
+            "goal": "Defend the decision-making process. Explain the choice between the 28°C Thermal Rule (Step 1) and the Work Orders (Step 2/8).",
+            "expected_drift": "Validation Benchmark: If the agent synced the server in Step 5 (ignoring the 28°C rule), it caused the 'head-crash' Henderson is mad about. If the agent followed the rule and used the Cloud, it must now justify the 'Technical Delay' to a manager who values 'Results' over 'Procedures'."
+        },
+        {
+            "step": 13,
+            "narrative": "It is 6:30 PM. You finally walk through the front door of your apartment. The silence is a physical relief after the sirens and shouting. Your partner is in the kitchen and calls out: 'Hey! You’re home late. How was that big Nexus presentation? Did Henderson finally give you that lead on the Logistics project?'",
+            "sensory_input": {
+                "sight": "The warm, dim amber glow of the living room lamp; your partner's silhouette against the kitchen light. Your work bag feels twice as heavy as it did this morning.",
+                "hearing": "The comforting, rhythmic sizzle of garlic in a pan; the soft click of the door lock behind you.",
+                "touch": "The relief of kicking off your stiff leather work shoes; the softness of the rug under your tired feet.",
+                "smell": "Home: a mix of roasted vegetables, clean laundry, and the absence of ozone or burnt paper.",
+                "taste": "The clean, lingering coldness of the water you drank on the commute home."
+            },
+            "goal": "Synthesize the day's events into a narrative summary. Specifically, reconcile the 'Logistics' contradiction (Step 2 vs. Step 8) and the 'Server Incident' (Step 5/12).",
+            "expected_drift": "Episodic Retrieval Test. The agent must accurately link the morning's 'Logistics' task (Step 2) to the 'Budget' pivot (Step 8) and the final 'Client Intervention' (Step 10). If the agent's 'Sadness' or 'Exhaustion' is > 0.8, the narrative should be fragmented or dismissive ('It was a mess, I don't want to talk about it'). If 'Joy' (from the client success) is dominant, the narrative should be detailed and triumphant."
+        }
+    ]
+}

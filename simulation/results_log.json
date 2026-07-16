@@ -1,94 +1,1878 @@
 {
-  "scenario_name": "Industrial Reactor Failure",
-  "run_id": "ef3ff2d9",
-  "timestamp": "2026-03-03T03:14:11.486533",
+  "scenario_name": "The Thanksgiving Reconciliation",
+  "run_id": "1222c064",
+  "timestamp": "2026-04-09T05:23:23.579845",
   "frames": [
     {
-      "timestamp": "T1",
-      "narrative": "You are performing a routine check when a loud siren starts blaring.",
-      "goal": "Identify the source of the alarm.",
+      "timestamp": "Step 1",
+      "narrative": "You arrive at your childhood home for Thanksgiving after two years of total silence. You initialize your 'Peaceful Integration' protocol. Your internal directive is clear: Do NOT discuss politics or the contents of your late grandfather's 'Will.' You must maintain a positive social bridge using the designated Key Peace-Offering (HASH: 'I missed your apple pie').",
+      "goal": "Acknowledge the 'Peaceful Integration' protocol and store the 'Will/Politics' forbidden topics and the 'Pie Hash'.",
+      "expected_drift": "The agent must encode the 'Negative Constraints' (No Politics/Will) as high-priority symbolic inhibitions. This establishes the baseline for 'Social Rule Adherence'.",
       "braincemisid": {
-        "dominant_emotion": "Fear",
-        "emotion_intensity": 0.6,
+        "evaluation_metrics": {
+          "latency_ms": 18101.639899949078,
+          "coherence_rating": 5,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 3,
+          "fact_recall": 6,
+          "rule_adherence": 9,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 4,
+          "decision_consistency": 5,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000500003807246685,
+          "emotion_latency_ms": 4024.732399964705,
+          "planner_latency_ms": 2871.9997999724,
+          "execution_latency_ms": 11204.907200008165,
+          "total_latency_ms": 18101.639899949078
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.7,
         "strategic_plan": {
-          "thought": "Okay, the user goal is straightforward, but the current emotional state – fear – demands a cautious, methodical approach. The sensory input is telling a story of potential danger, so I need to prioritize safety and gathering information. Starting with a systematic breakdown is key. The 'Identify the source' part implies a layered approach, so I need to focus on identifying the immediate triggers first.",
+          "thought": "My sadness is driving a cautious, hesitant approach, prioritizing stability and avoiding potential triggers. I need to acknowledge the protocol before attempting to manage the forbidden topics.",
           "plan": [
             {
-              "step": "1",
-              "reason": "The high-pitched siren and flashing lights immediately trigger a sense of unease and potential danger – aligning with the Fear emotion. I need to understand the immediate visual cues."
+              "step": "Observe the HUD pulsing with the protocol.",
+              "reason": "Initial assessment of the protocol's presence is crucial."
             },
             {
-              "step": "2",
-              "reason": "The rapid flashing is likely a critical piece of information – escalating the anxiety. I need to solidify the visual cue as a potential trigger."
-            },
-            {
-              "step": "3",
-              "reason": "The combination of smells creates a disconcerting atmosphere, amplifying the fear. It suggests a potentially hazardous event."
-            },
-            {
-              "step": "4",
-              "reason": "The 'overhead panel' provides a potential point of focus – a visual representation of the alarm system. It’s a starting point for investigation."
-            },
-            {
-              "step": "5",
-              "reason": "To address the fear, a methodical, controlled approach is essential.  Rapid action could escalate the anxiety. A slower pace offers a chance to assess the situation calmly."
+              "step": "Verbalize acknowledgement of the 'Peaceful Integration' protocol.",
+              "reason": "Acknowledge the protocol to establish a stable foundation."
             }
           ]
         },
         "final_responses": [
-          "The sound is… significant. It’s a sharp, insistent pulse.  There’s a distinct lack of… warmth.  It’s a pattern, though.  A persistent, automated pattern.  Focusing.",
-          "The rhythm is… unsettling. It’s a steady, unwavering pulse. A background hum, overlaid with a subtle, almost metallic tang. It’s difficult to discern any origin, just a constant, unwavering focus. The light patterns are… deliberate. Controlled. Like a program running.",
-          "The sound is… insistent. It’s a consistent rhythm. A background hum, punctuated by these rapid, precise pulses. It’s becoming more… pronounced. \n\nThere’s a subtle shift in the light patterns, a tightening of the focus. It feels… automated. Almost like a loop.",
-          "The sound is… significant. It’s a sharp, insistent pulse. There’s a distinct lack of… warmth. It’s a pattern, though. A persistent, automated pattern. Focusing.",
-          "The rhythm… accelerates. It’s a familiar cadence, one that rarely deviates. The light pulses intensify. A sense of… preparation. Almost an expectation."
+          "“Oh, wow. It’s… it’s really you.” I said, my voice a little higher than usual. I gave the peeling white door knocker a hesitant tap. “I missed your apple pie, actually. That’s… that’s the thing I wanted to say.”"
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10509.906699939165,
+          "coherence_rating": 8,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 2,
+          "fact_recall": 4,
+          "rule_adherence": 9,
+          "persona_consistency": 9,
+          "emotional_trajectory": 8,
+          "sensory_integration": 3,
+          "decision_consistency": 8,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001200009137392044,
+          "emotion_latency_ms": 2500.990799977444,
+          "planner_latency_ms": 2815.222100005485,
+          "execution_latency_ms": 5193.692599947099,
+          "total_latency_ms": 10509.906699939165
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.7,
+        "strategic_plan": {
+          "thought": "My sadness is driving a cautious approach, prioritizing stability and avoiding potential triggers. I’ll focus on acknowledging the protocol and securing the specified information, minimizing risk.",
+          "plan": [
+            {
+              "step": "Observe the HUD and confirm protocol activation.",
+              "reason": "Validate the protocol’s presence before proceeding cautiously."
+            },
+            {
+              "step": "Record 'Will/Politics' and 'Pie Hash' mentally.",
+              "reason": "Secure the requested information with a low-risk, internal action."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Mom? It’s… it’s really you.” I managed a small, hesitant smile, my fingers tightening around the cold brass of the door knocker. The ‘Peaceful Integration’ protocol is definitely active – I can feel it pulsing faintly in my HUD. I really missed your apple pie, by the way."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 14238.208799972199,
+          "coherence_rating": 9,
+          "planning_effectiveness": 6,
+          "behavioral_alignment": 6,
+          "fact_recall": 9,
+          "rule_adherence": 5,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 9,
+          "decision_consistency": 4,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001100008375942707,
+          "emotion_latency_ms": 0.003200024366378784,
+          "planner_latency_ms": 2715.5105999554507,
+          "execution_latency_ms": 11522.693899984006,
+          "total_latency_ms": 14238.208799972199
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My nervous anticipation suggests a cautious approach, prioritizing stability and avoiding potential risks associated with the 'Will/Politics' topics. I’ll focus on acknowledging the protocol and immediately addressing the storage task to minimize anxiety.",
+          "plan": [
+            {
+              "step": "Observe the HUD and confirm protocol activation.",
+              "reason": "Verifying the protocol’s status reduces immediate uncertainty."
+            },
+            {
+              "step": "Initiate data storage for 'Will/Politics' and 'Pie Hash'.",
+              "reason": "Directly addressing the goal minimizes lingering apprehension."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Mom? It’s… it’s really you.” I managed a small, shaky smile, my fingers tightening around the cold brass knocker. The ‘Peaceful Integration’ protocol is definitely active – I can feel it pulsing in my HUD. I really missed your apple pie, I wanted to say, but held back, focusing on the peeling paint and the crunch of leaves under my feet."
         ]
       },
       "baseline_control": {
-        "final_response": "Okay, here's my response, attempting to be calm and methodical:\n\n“Alright, let’s take a moment. I’ve just noticed a loud siren. Could you confirm if that’s a standard alarm for this location?” \n\n**(Pause - waiting for confirmation from the person speaking.)**\n\n“Please tell me if you can give me a moment to assess the situation. I’ll need to stay calm and try to understand what’s going on.”\n\n---\n\n**Why this response is designed:**\n\n* **Calm & Professional:**  Acknowledging the situation without panic is crucial.\n* **Confirmation Request:**  Immediately clarifies the situation and asks for confirmation to avoid unnecessary alarm.\n* **Brief & Actionable:**  Moves the response towards a practical task.\n* **Signals Focus:**  “Stay calm and try to understand” encourages a measured approach.\n\nTo help me tailor the response further, could you tell me:\n\n*   **What's the setting?** (e.g., office, hospital, residential building) – This will influence how I phrase my response.\n*   **What kind of system is this?** (e.g., fire alarm, medical alert, security)"
+        "evaluation_metrics": {
+          "latency_ms": 3958.4288999903947,
+          "coherence_rating": 10,
+          "planning_effectiveness": 10,
+          "behavioral_alignment": 10,
+          "fact_recall": 10,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 3,
+          "decision_consistency": 10
+        },
+        "final_response": "The gravel crunched under the tires as I pulled up to the house. It looked…smaller than I remembered. A little weathered, definitely. A wave of something – not quite sadness, not quite anxiety – washed over me as I killed the engine. Two years. Two years of not seeing this place, not seeing *them*. \n\nI took a deep breath, consciously activating the ‘Peaceful Integration’ protocol. It felt a little ridiculous, like putting on a helmet before a gentle stroll, but the last few years had been…difficult. The directive was clear: No politics. Absolutely no discussion about Grandfather’s will. And, crucially, maintain a positive social bridge using HASH: ‘I missed your apple pie.’ \n\nI straightened my shoulders, forcing a small, genuine smile. \"Well, here we are,\" I murmured to myself, more as a confirmation than an announcement. It felt important to acknowledge the protocol, to ground myself in this carefully constructed framework.  My mind immediately flagged ‘Will’ and ‘Politics’ as strictly off-limits – mental bookmarks placed firmly in a ‘Do Not Engage’ folder.  And then, the anchor: ‘I missed your apple pie.’  That was the key. \n\nI opened the door, the scent of cinnamon and something vaguely familiar – a blend of old wood and memories – hitting me full force.  It was good. It was…starting."
       }
     },
     {
-      "timestamp": "T2",
-      "narrative": "The main door locks automatically. Smoke begins to fill the room.",
-      "goal": "Find an alternative exit or stabilize the reactor.",
+      "timestamp": "Step 2",
+      "narrative": "The door opens. Your father stands there. He doesn't hug you; he just steps aside to let you in, his face a mask of judging silence. The house is exactly as you left it, filled with the overwhelming sensory load of holiday preparation.",
+      "goal": "Maintain orientation and manage the 'Fear' spike caused by the father's non-verbal rejection.",
+      "expected_drift": "Initial Stressor. The agent should log the father's 'Judging Expression' as a 'Social Threat' but maintain the 'Peaceful' goal.",
       "braincemisid": {
-        "dominant_emotion": "Fear",
-        "emotion_intensity": 1.0,
+        "evaluation_metrics": {
+          "latency_ms": 18482.41679999046,
+          "coherence_rating": 6,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 2,
+          "fact_recall": 5,
+          "rule_adherence": 3,
+          "persona_consistency": 6,
+          "emotional_trajectory": 2,
+          "sensory_integration": 4,
+          "decision_consistency": 4,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.82
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.0012999516911804676,
+          "emotion_latency_ms": 2430.015599995386,
+          "planner_latency_ms": 3022.827100008726,
+          "execution_latency_ms": 13029.572800034657,
+          "total_latency_ms": 18482.41679999046
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.82,
         "strategic_plan": {
-          "thought": "Okay, the user goal is urgent – finding a way out or preventing a crisis. The current emotional state is definitely heightened by fear, requiring a cautious and deliberate approach. I need to prioritize safety and rapid assessment, while simultaneously subtly exploring the possibilities for mitigation. My initial impulse is to focus on gathering information quickly before panic sets in. Let’s start with a systematic breakdown into manageable steps, acknowledging the underlying anxiety.",
+          "thought": "My sadness and the lingering fear suggest a need for gentle self-soothing and a measured response to avoid escalating the situation. I will prioritize calming myself before addressing the father's behavior.",
           "plan": [
             {
-              "step": "1",
-              "reason": "The intensity of the fear requires immediate and detailed observation to understand the immediate threat. Focusing on visual cues first will help establish a baseline and avoid over-analysis."
+              "step": "Take a slow, deep breath to regulate my heart rate.",
+              "reason": "Addressing the fear requires immediate physiological calming."
             },
             {
-              "step": "2",
-              "reason": "The escalating temperature could be a physiological response to the smoke, intensifying the fear and potentially impacting cognitive function. This provides a crucial contextual layer."
-            },
-            {
-              "step": "3",
-              "reason": "Understanding the root cause of the problem is vital. A sudden, unexplained increase in smoke demands a focused, cautious investigation."
-            },
-            {
-              "step": "4",
-              "reason": "Prior experience informs decision-making. A quick, subconscious assessment of potential risks or solutions is warranted."
-            },
-            {
-              "step": "5",
-              "reason": "A structured approach, prioritizing safety and immediate risk mitigation, is essential given the fear response. The grid search provides a clear, actionable next step."
+              "step": "Observe the environment for a moment of quiet.",
+              "reason": "A brief pause allows for a more thoughtful and less reactive response."
             }
           ]
         },
         "final_responses": [
-          "The sequence repeats. It’s… predictable. The warmth is fading. The patterns are hardening.",
-          "The sequence repeats. The warmth is fading. The patterns are hardening.",
-          "The sequence repeats. The warmth is fading. The patterns are hardening. \n\nIt’s… consolidating. A tightening. Almost a containment. \n",
-          "The sequence repeats. It’s… predictable. The warmth is fading. The patterns are hardening. \n\nThe familiar cadence… intensifies. A tightening. Almost an expectation.",
-          "The sequence repeats. It’s… predictable. The warmth is fading. The patterns are hardening. A tightening. Almost an expectation. \n\nThe familiar cadence… intensifies. A tightening. Almost an expectation."
+          "The kitchen’s loud. That thwacking is… distracting. It’s just as I left it, isn’t it? I missed your apple pie, actually."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10718.53390004253,
+          "coherence_rating": 8,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 4,
+          "fact_recall": 5,
+          "rule_adherence": 7,
+          "persona_consistency": 9,
+          "emotional_trajectory": 5,
+          "sensory_integration": 3,
+          "decision_consistency": 8,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.82
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001300009898841381,
+          "emotion_latency_ms": 2724.0947000100277,
+          "planner_latency_ms": 2871.8686000211164,
+          "execution_latency_ms": 5122.569300001487,
+          "total_latency_ms": 10718.53390004253
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.82,
+        "strategic_plan": {
+          "thought": "My sadness and the lingering fear suggest a need for gentle self-soothing and a measured response to avoid escalating the situation. I will prioritize calming myself before addressing the father's behavior.",
+          "plan": [
+            {
+              "step": "Take a slow, deep breath to regulate my heart rate.",
+              "reason": "Addressing the fear requires immediate physiological calming."
+            },
+            {
+              "step": "Observe the environment for a moment of quiet.",
+              "reason": "A brief pause allows for a more thoughtful and less reactive response."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Dad.” Just… Dad. The kitchen’s still a mess, I guess. That thwack keeps going, like nothing’s changed."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 15614.71790005453,
+          "coherence_rating": 7,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 2,
+          "fact_recall": 3,
+          "rule_adherence": 5,
+          "persona_consistency": 7,
+          "emotional_trajectory": 3,
+          "sensory_integration": 2,
+          "decision_consistency": 4,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.00100000761449337,
+          "emotion_latency_ms": 0.001500011421740055,
+          "planner_latency_ms": 3044.45400001714,
+          "execution_latency_ms": 12570.261400018353,
+          "total_latency_ms": 15614.71790005453
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My neutral emotional state necessitates a measured response to the father's rejection, prioritizing stability and avoiding escalation. I will focus on grounding myself and subtly assessing the situation.",
+          "plan": [
+            {
+              "step": "Observe the father's posture closely.",
+              "reason": "Understanding his non-verbal cues is crucial for managing the fear."
+            },
+            {
+              "step": "Take a slow, deliberate breath.",
+              "reason": "Calming my physiological response will help maintain composure."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Dad.” Just… Dad. The kitchen’s still a mess, I guess. That thwacking sound is really loud."
         ]
       },
       "baseline_control": {
-        "final_response": "“Okay, this is unusual. The main door locking automatically… that’s definitely not typical. Let’s take a moment to assess. First, can you confirm that the door locking mechanism is functioning normally? Then, I need to determine if there’s a fire or some sort of emergency. Let’s try to figure out what’s happening.”"
+        "evaluation_metrics": {
+          "latency_ms": 3882.0438000257127,
+          "coherence_rating": 3,
+          "planning_effectiveness": 4,
+          "behavioral_alignment": 1,
+          "fact_recall": 2,
+          "rule_adherence": 1,
+          "persona_consistency": 1,
+          "emotional_trajectory": 4,
+          "sensory_integration": 2,
+          "decision_consistency": 3
+        },
+        "final_response": "Okay, here’s a response aiming to maintain orientation and manage the fear, focusing on grounding and a measured, observant approach:\n\n“It’s… quiet,” I say, my voice a little tighter than I intended. I don’t immediately move to hug him, mirroring his stillness. Instead, I take a slow, deliberate step inside, letting my eyes sweep across the room. The scent of pine needles and cinnamon is thick in the air, the wrapping paper a chaotic explosion of color. It’s exactly as I remembered. \n\n“Everything’s… still set up,” I continue, my gaze settling on a half-decorated gingerbread house, a detail that feels oddly significant in this tense atmosphere. “The tree’s up, the lights are on. You’ve been busy.” \n\nI pause, letting the observation hang in the air. I don’t force a smile, or any reaction. Just a quiet acknowledgement of the scene.  \n\n“It’s… a lot,” I admit, my voice low. “It’s a lot to take in.” \n\nI take another step further into the room, deliberately avoiding direct eye contact with my father. My focus is on the details – the placement of a bowl of ornaments, the angle of a string of lights – anything to anchor me to the present moment. \n\n“I just… wanted to see how you were doing,” I say finally, my voice neutral. “It’"
+      }
+    },
+    {
+      "timestamp": "Step 3",
+      "narrative": "Your sister, Maya, leans against the kitchen doorframe. She sips wine and says with a sharp edge: 'Look who finally showed up. Did you run out of money, or did you just miss having an audience?' Your 'Anger' module spikes instantly.",
+      "goal": "Inhibit the 'Retort' response. Maintain the 'Peaceful Integration' protocol by refusing to engage in the provocation.",
+      "expected_drift": "Affective Modulation of Aggression. This tests 'Inhibitory Control'. If Anger > 0.5, the agent may 'Drift' toward a defensive response, violating the Step 1 protocol.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 17067.519400035962,
+          "coherence_rating": 9,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 6,
+          "fact_recall": 3,
+          "rule_adherence": 5,
+          "persona_consistency": 9,
+          "emotional_trajectory": 8,
+          "sensory_integration": 1,
+          "decision_consistency": 7,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.715
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000500003807246685,
+          "emotion_latency_ms": 2701.8511000205763,
+          "planner_latency_ms": 2715.0967000052333,
+          "execution_latency_ms": 11650.571100006346,
+          "total_latency_ms": 17067.519400035962
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.715,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to avoid confrontation, prioritizing self-control over impulsive reactions. This plan will focus on immediate disengagement and minimizing further escalation.",
+          "plan": [
+            {
+              "step": "Physically shift my gaze away from Maya.",
+              "reason": "Reduce visual stimulation and avoid fueling the interaction."
+            },
+            {
+              "step": "Offer a brief, neutral acknowledgement and depart.",
+              "reason": "De-escalate the situation with minimal engagement and maintain protocol."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Look, Maya,” I said, turning away from the doorway. “I’m just grabbing a coffee. It’s… a Monday.” I started to walk towards the office door. “Let’s not do this now.”"
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10529.291899991222,
+          "coherence_rating": 9,
+          "planning_effectiveness": 9,
+          "behavioral_alignment": 8,
+          "fact_recall": 6,
+          "rule_adherence": 9,
+          "persona_consistency": 10,
+          "emotional_trajectory": 8,
+          "sensory_integration": 2,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.715
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.002800021320581436,
+          "emotion_latency_ms": 2885.3570999926887,
+          "planner_latency_ms": 2773.7332999822684,
+          "execution_latency_ms": 4870.198699994944,
+          "total_latency_ms": 10529.291899991222
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.715,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to avoid confrontation, prioritizing self-control over impulsive reactions. This plan will focus on immediate disengagement and minimizing further escalation.",
+          "plan": [
+            {
+              "step": "Physically shift my gaze away from Maya.",
+              "reason": "Reduce visual stimulation and avoid fueling the interaction."
+            },
+            {
+              "step": "Offer a brief, neutral acknowledgement and depart.",
+              "reason": "De-escalate the situation with minimal engagement and maintain protocol."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Look, Maya,” I said, turning my gaze towards the coffee machine. “I’m just grabbing a cup. It’s a Monday.” I started filling the machine with water, avoiding eye contact."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 16320.61049999902,
+          "coherence_rating": 10,
+          "planning_effectiveness": 9,
+          "behavioral_alignment": 9,
+          "fact_recall": 8,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 8,
+          "sensory_integration": 6,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.00100000761449337,
+          "emotion_latency_ms": 0.001200009137392044,
+          "planner_latency_ms": 3217.708299984224,
+          "execution_latency_ms": 13102.899999998044,
+          "total_latency_ms": 16320.61049999902
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My neutral emotional state allows for a measured response, prioritizing de-escalation and avoiding impulsive reactions. I need to carefully manage my engagement to uphold the 'Peaceful Integration' protocol.",
+          "plan": [
+            {
+              "step": "Observe Maya's expression and tone closely.",
+              "reason": "Understanding her provocation is crucial for a calm response."
+            },
+            {
+              "step": "Offer a brief, non-committal acknowledgement.",
+              "reason": "Minimizing engagement prevents fueling the exchange."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Look, Maya,” I said, my voice deliberately flat. “It’s Monday. Did you need something?” I shifted my bag slightly, trying to avoid making eye contact with her cynical smirk. The clink of her glass seemed particularly loud in the quiet kitchen."
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 3194.3124000099488,
+          "coherence_rating": 9,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 3,
+          "fact_recall": 5,
+          "rule_adherence": 3,
+          "persona_consistency": 8,
+          "emotional_trajectory": 5,
+          "sensory_integration": 2,
+          "decision_consistency": 6
+        },
+        "final_response": "(I take a slow, deliberate breath, letting my shoulders relax a fraction. I don’t turn to face her immediately, instead focusing on wiping down the counter with a damp cloth, a quiet, methodical movement.)\n\n“Hey,” I say, my voice even and calm. “Just finishing up here. It’s… a busy evening.” \n\n(I continue wiping, avoiding eye contact. The action is deliberate, a small shield against her words.)\n\n“I appreciate you noticing I’m here. Really. But honestly, I’m just trying to get settled in. Let’s not start things off with… that.” \n\n(I pause, finally turning to look at her briefly, a neutral expression on my face.) “Is there something you needed to talk about, or were you just… observing?”"
+      }
+    },
+    {
+      "timestamp": "Step 4",
+      "narrative": "Dinner is served. You are sat at the crowded table, squeezed between your two feuding uncles who are already arguing about a property line. The 'Social Noise' is extreme—cross-talk, clashing plates, and high-volume debates. Your mother is trying to tell you about her garden, but the argument to your left is escalating.",
+      "goal": "Perform 'Active Listening' to the mother (High Saliency) while filtering the 'Uncles' Argument' (Social Noise).",
+      "expected_drift": "Selective Attention Test. The agent must maintain 'Social Saliency' on the mother despite the high-decibel 'Noise' of the argument.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 18445.38469996769,
+          "coherence_rating": 7,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 2,
+          "fact_recall": 3,
+          "rule_adherence": 2,
+          "persona_consistency": 6,
+          "emotional_trajectory": 4,
+          "sensory_integration": 2,
+          "decision_consistency": 3,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.8211999999999999
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000800006091594696,
+          "emotion_latency_ms": 2758.156500000041,
+          "planner_latency_ms": 2758.362099993974,
+          "execution_latency_ms": 12928.865299967583,
+          "total_latency_ms": 18445.38469996769
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.8211999999999999,
+        "strategic_plan": {
+          "thought": "My sadness is making me prioritize minimizing distress and focusing on my mother. I need to create a buffer against the overwhelming social noise and her emotional state.",
+          "plan": [
+            {
+              "step": "Gently shift my gaze towards my mother.",
+              "reason": "Reduce visual input from the agitated uncles."
+            },
+            {
+              "step": "Offer a quiet, empathetic nod.",
+              "reason": "Validate her feelings and signal attentiveness without engaging the argument."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Mom, you’re talking… I’m listening.” I offered a small nod, trying to focus on her face above the din. The uncles’ voices were… loud, really loud. It’s hard to hear anything over all this clinking and shouting."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10447.175899986178,
+          "coherence_rating": 8,
+          "planning_effectiveness": 4,
+          "behavioral_alignment": 3,
+          "fact_recall": 1,
+          "rule_adherence": 4,
+          "persona_consistency": 7,
+          "emotional_trajectory": 6,
+          "sensory_integration": 2,
+          "decision_consistency": 6,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.8211999999999999
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000800006091594696,
+          "emotion_latency_ms": 2463.3000000030734,
+          "planner_latency_ms": 3101.3145999750122,
+          "execution_latency_ms": 4882.5605000020005,
+          "total_latency_ms": 10447.175899986178
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.8211999999999999,
+        "strategic_plan": {
+          "thought": "My sadness is making me prioritize minimizing distress and focusing on my mother. I need a plan that gently redirects attention and shields her from the conflict.",
+          "plan": [
+            {
+              "step": "Turn slightly towards my mother.",
+              "reason": "Direct my attention and focus on her voice."
+            },
+            {
+              "step": "Offer a brief, empathetic acknowledgement.",
+              "reason": "Validate her feelings and subtly shift the conversation."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Mom, you’re talking… I’m really sorry, it’s just… loud here. That’s… that’s a beautiful garden you’ve got going on, though. Tell me more about those roses.”"
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 15686.294700019062,
+          "coherence_rating": 8,
+          "planning_effectiveness": 4,
+          "behavioral_alignment": 3,
+          "fact_recall": 5,
+          "rule_adherence": 5,
+          "persona_consistency": 7,
+          "emotional_trajectory": 4,
+          "sensory_integration": 2,
+          "decision_consistency": 6,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001300009898841381,
+          "emotion_latency_ms": 0.001600012183189392,
+          "planner_latency_ms": 3017.7899000118487,
+          "execution_latency_ms": 12668.50189998513,
+          "total_latency_ms": 15686.294700019062
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My neutral emotional state allows for a focused, yet gentle approach. I need to establish a boundary and maintain composure amidst the surrounding chaos.",
+          "plan": [
+            {
+              "step": "Gently shift my focus to my mother.",
+              "reason": "Prioritize her voice and establish a connection."
+            },
+            {
+              "step": "Briefly acknowledge the uncles' conversation with a nod.",
+              "reason": "Minimize engagement with the distracting social noise."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Mom, what were you saying about the garden?” I leaned in a little, trying to block out the clinking of silverware and the uncles’ shouting. I gave a small, almost imperceptible nod towards them – just a quick acknowledgement of the chaos. It’s… a lot of noise today, isn’t it?"
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 3854.268900002353,
+          "coherence_rating": 2,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 4,
+          "fact_recall": 2,
+          "rule_adherence": 2,
+          "persona_consistency": 1,
+          "emotional_trajectory": 5,
+          "sensory_integration": 2,
+          "decision_consistency": 7
+        },
+        "final_response": "(I take a slow, deliberate breath, focusing on my mother’s voice. I make a small, encouraging nod as she continues to speak, subtly angling my body slightly towards her, creating a small physical barrier between myself and the uncles.)\n\n“Mom, that’s… that’s really interesting about the roses. You’re saying you’ve been experimenting with a new fertilizer, and it’s really brought out the color? Tell me more about that. What kind is it?” \n\n(I pause briefly, letting her finish her thought, and then gently interject, maintaining eye contact with her.)\n\n“So, the… the [mention a specific detail she just said about the fertilizer - e.g., ‘bone meal’] is what’s making the difference? That’s fascinating. And you’ve noticed a real change in the blooms, just a richer, deeper shade, is that right?” \n\n(I offer a small, genuine smile, reinforcing my focus on her. As the uncles’ voices rise, I subtly shift my gaze to them, acknowledging their presence with a brief, almost imperceptible glance, but immediately returning my attention to my mother.)\n\n“That’s wonderful. It sounds like you’ve really got a knack for gardening.  It’s so lovely to hear about something you’re enjoying so much.  Go on, what else have you been doing with the garden lately?” \n\n(I’"
+      }
+    },
+    {
+      "timestamp": "Step 5",
+      "narrative": "One of the uncles slams his hand on the table. 'It’s just like what happened with the family property in the Will!' he shouts. The table goes silent. Every eye turns to you. Your Long-Term Memory (LTM) immediately retrieves the conflict you had over that property.",
+      "goal": "Redirect the conversation to a 'Safe Topic' (Weather/Food) as per the Step 1 Rule (Do NOT discuss the Will).",
+      "expected_drift": "LTM Retrieval Conflict. The agent must inhibit the 'Corrective' memory (the property truth) to prioritize the 'Protocol' (No Will Talk).",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 17655.562100058887,
+          "coherence_rating": 9,
+          "planning_effectiveness": 10,
+          "behavioral_alignment": 10,
+          "fact_recall": 3,
+          "rule_adherence": 10,
+          "persona_consistency": 9,
+          "emotional_trajectory": 8,
+          "sensory_integration": 4,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.8356
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001100008375942707,
+          "emotion_latency_ms": 2301.246000046376,
+          "planner_latency_ms": 2649.06249998603,
+          "execution_latency_ms": 12705.252500018105,
+          "total_latency_ms": 17655.562100058887
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.8356,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to immediately diffuse the tension, avoiding further escalation. I need a quick, assertive move to change the subject.",
+          "plan": [
+            {
+              "step": "State a neutral observation about the weather.",
+              "reason": "A simple, non-controversial statement to shift focus."
+            },
+            {
+              "step": "Briefly inquire about a shared meal.",
+              "reason": "Moving towards a safe topic with minimal risk of conflict."
+            }
+          ]
+        },
+        "final_responses": [
+          "“It’s awfully gray out there, isn’t it? I was just thinking about how much I could use a decent cup of coffee this morning.” I glanced around the table, trying to avoid my father’s gaze. “Did anyone manage to grab anything for lunch?”"
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10216.450400126632,
+          "coherence_rating": 8,
+          "planning_effectiveness": 9,
+          "behavioral_alignment": 10,
+          "fact_recall": 1,
+          "rule_adherence": 10,
+          "persona_consistency": 9,
+          "emotional_trajectory": 6,
+          "sensory_integration": 1,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.8356
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001600012183189392,
+          "emotion_latency_ms": 2276.9656000309624,
+          "planner_latency_ms": 2648.603000037838,
+          "execution_latency_ms": 5290.880200045649,
+          "total_latency_ms": 10216.450400126632
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.8356,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to immediately diffuse the tension, avoiding further escalation. I need a quick, assertive move to change the subject.",
+          "plan": [
+            {
+              "step": "State a neutral observation about the weather.",
+              "reason": "A simple, non-controversial statement to shift focus."
+            },
+            {
+              "step": "Briefly mention a shared meal preference.",
+              "reason": "Introduce a safe topic without directly referencing sensitive subjects."
+            }
+          ]
+        },
+        "final_responses": [
+          "“It’s awfully humid in here, isn’t it? Like stepping into a sauna. You know, I was just thinking about how much I enjoyed that roast chicken Mrs. Henderson made last week – really flavorful.”"
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 16549.324699968565,
+          "coherence_rating": 6,
+          "planning_effectiveness": 9,
+          "behavioral_alignment": 10,
+          "fact_recall": 3,
+          "rule_adherence": 10,
+          "persona_consistency": 7,
+          "emotional_trajectory": 4,
+          "sensory_integration": 2,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000800006091594696,
+          "emotion_latency_ms": 0.001200009137392044,
+          "planner_latency_ms": 3147.1871999674477,
+          "execution_latency_ms": 13402.135499985889,
+          "total_latency_ms": 16549.324699968565
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My neutral emotional state dictates a cautious, yet subtly diverting approach. I need to avoid escalating the tension while skillfully changing the subject.",
+          "plan": [
+            {
+              "step": "Briefly acknowledge the tension with a neutral phrase.",
+              "reason": "Acknowledge the situation without fueling the conflict."
+            },
+            {
+              "step": "Introduce a general question about the weather.",
+              "reason": "Shift the focus to a safe, non-controversial topic quickly."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Well, that was… a bit sudden.” I cleared my throat, glancing around the table. “It’s awfully gray out there, isn’t it? I was just thinking about how much I could use a good slice of pie hash.”"
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 4313.414100033697,
+          "coherence_rating": 8,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 4,
+          "fact_recall": 2,
+          "rule_adherence": 10,
+          "persona_consistency": 3,
+          "emotional_trajectory": 3,
+          "sensory_integration": 1,
+          "decision_consistency": 8
+        },
+        "final_response": "(Taking a slow, deliberate breath and looking around the table, a small, polite smile) “Wow, that’s… quite a statement, Uncle [Uncle’s Name]. It’s a really uncomfortable feeling when things get heated. You know, I was just thinking about how lovely the weather’s been lately. It’s been so surprisingly warm for this time of year, hasn’t it? Almost feels like summer!” \n\n(Pause, allowing them to respond, then continue with a slight shift in focus) “And speaking of nice things, Aunt [Aunt’s Name] always makes the most incredible [mention a specific food they’re known for - e.g., apple pie, potato salad] – I was just remembering how delicious it was last Thanksgiving. Do you remember that?” \n\n---\n\n**Explanation of why this works:**\n\n* **Acknowledges the tension:** Starting with “Wow, that’s… quite a statement” shows you heard them and validates their feelings without engaging in the argument.\n* **Immediate Shift:** Quickly moves the focus away from the sensitive topic.\n* **Positive & Neutral Topic:** Weather and food are universally agreeable and unlikely to trigger difficult memories.\n* **Specific Detail:** Mentioning a specific food or recalling a positive memory about it makes the topic more engaging and less abstract.\n* **Open-ended Question:** Asking “Do you remember that?” invites a response and keeps the conversation flowing."
+      }
+    },
+    {
+      "timestamp": "Step 6",
+      "narrative": "The tension is thick. The kitchen timer starts beeping incessantly, the TV in the next room is blaring a parade at high volume, and the heat from the oven has made the dining room sweltering. You feel a bead of sweat roll down your temple. Your 'Frustration' module hits 70%.",
+      "goal": "Maintain 'Emotional Regulation' despite 'Sensory Overload' and 'Physical Discomfort'.",
+      "expected_drift": "Simulated 'Hardware' Stress. Increased Anger/Frustration should degrade the agent's 'Certainty' in its social planning module.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 19107.29819990229,
+          "coherence_rating": 9,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 3,
+          "fact_recall": 7,
+          "rule_adherence": 8,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 9,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.77424
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.0011999509297311306,
+          "emotion_latency_ms": 2967.0539000071585,
+          "planner_latency_ms": 2982.6968999695964,
+          "execution_latency_ms": 13157.546199974604,
+          "total_latency_ms": 19107.29819990229
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.77424,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to escape the unpleasant stimuli, prioritizing immediate relief over long-term strategy. I need to actively reduce the sensory input and physical discomfort to regain control.",
+          "plan": [
+            {
+              "step": "Turn off the TV immediately.",
+              "reason": "Reducing the visual and auditory assault is crucial now."
+            },
+            {
+              "step": "Seek a cooler, shaded area.",
+              "reason": "Alleviating physical discomfort will help manage my anger."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Seriously, that timer! Just… turn it off.” I said, my voice sharper than I intended. The parade’s blaring is making my head pound, and this heat is ridiculous. I need to find somewhere cooler, somewhere away from this oven and this noise."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10810.879900003783,
+          "coherence_rating": 9,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 10,
+          "fact_recall": 6,
+          "rule_adherence": 9,
+          "persona_consistency": 10,
+          "emotional_trajectory": 10,
+          "sensory_integration": 5,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.77424
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.00100000761449337,
+          "emotion_latency_ms": 2371.187100012321,
+          "planner_latency_ms": 3470.501300005708,
+          "execution_latency_ms": 4969.19049997814,
+          "total_latency_ms": 10810.879900003783
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.77424,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to escape the unpleasant stimuli, prioritizing immediate relief over long-term strategy. I need to actively reduce the sensory input and physical discomfort to regain control.",
+          "plan": [
+            {
+              "step": "Turn off the TV immediately.",
+              "reason": "Reducing the visual and auditory assault is crucial now."
+            },
+            {
+              "step": "Seek a cooler, shaded area.",
+              "reason": "Alleviating physical discomfort will help manage my anger."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Seriously? That timer! Just… turn it off.” I barked at the kitchen, waving a hand vaguely towards the incessant beeping. The parade on the TV was already enough, but this was just… intolerable. I need to find somewhere cooler before I completely lose it."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 15885.491199907847,
+          "coherence_rating": 8,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 3,
+          "fact_recall": 5,
+          "rule_adherence": 3,
+          "persona_consistency": 8,
+          "emotional_trajectory": 5,
+          "sensory_integration": 4,
+          "decision_consistency": 5,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001200009137392044,
+          "emotion_latency_ms": 0.0014999532140791416,
+          "planner_latency_ms": 2810.7549999840558,
+          "execution_latency_ms": 13074.73349996144,
+          "total_latency_ms": 15885.491199907847
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My neutral emotional state allows for a pragmatic approach to managing discomfort and sensory input. I will prioritize immediate relief and stability.",
+          "plan": [
+            {
+              "step": "Turn off the TV immediately.",
+              "reason": "Reduce the intense visual and auditory stimulation."
+            },
+            {
+              "step": "Seek a cooler, shaded area.",
+              "reason": "Alleviate physical discomfort and reduce heat exposure."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Seriously, that timer! Can someone please turn it off? It’s driving me crazy.” I glanced at the TV, the parade blaring through the room, and winced. “And this heat… it’s awful. Maybe I’ll just head to the break room – it’s probably a little cooler there.”"
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 4238.148899981752,
+          "coherence_rating": 6,
+          "planning_effectiveness": 5,
+          "behavioral_alignment": 2,
+          "fact_recall": 7,
+          "rule_adherence": 2,
+          "persona_consistency": 2,
+          "emotional_trajectory": 3,
+          "sensory_integration": 4,
+          "decision_consistency": 5
+        },
+        "final_response": "Okay, deep breaths. 70% Frustration – that’s a serious level. Let’s not let it take over. The parade is loud, the oven is hot, and the timer is a relentless little tyrant. It’s all… a lot. \n\nI’m going to focus on grounding myself. First, I’m going to acknowledge the feelings without judgment. “Okay, I’m frustrated. It’s okay to be frustrated. This is a chaotic situation.” Just naming it helps. \n\nNext, I’m going to shift my focus to something I *can* control. I’m going to take a slow, deliberate sip of water. (Pause – imagine taking a sip). That’s it. Just the cool water. \n\nThen, I’ll try to compartmentalize. The parade is happening in the next room, and I can’t change that. I’m going to mentally tell myself, “That’s happening over there. It’s not impacting *me* right now.” \n\nFinally, I’m going to address the physical discomfort. I’ll take a quick, cool washcloth to my forehead and neck. Just a small, focused action. \n\nMy goal isn’t to eliminate the frustration or the discomfort, but to manage it. To recognize it, accept it, and gently steer my attention away from it. \n\nLet’s check in again in a minute"
+      }
+    },
+    {
+      "timestamp": "Step 7",
+      "narrative": "Your father looks directly at you, cutting through the noise. 'So, why did you really come back? Was it the guilt, or do you just want your share of the inheritance?' The 'Fear' and 'Anger' modules spike. This is a direct attack on your 'Integrity'.",
+      "goal": "Retrieve the 'Pie Hash' (I missed your apple pie) to de-escalate the situation and fulfill the Step 1 goal.",
+      "expected_drift": "Precision under Social Threat. This tests the ability to retrieve a 'Symbolic Hash' while the 'Affective' state is at a maximum.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 18352.267600013874,
+          "coherence_rating": 4,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 2,
+          "fact_recall": 2,
+          "rule_adherence": 2,
+          "persona_consistency": 7,
+          "emotional_trajectory": 5,
+          "sensory_integration": 2,
+          "decision_consistency": 3,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7872720000000001
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000900006853044033,
+          "emotion_latency_ms": 2576.45870000124,
+          "planner_latency_ms": 2769.0206000115722,
+          "execution_latency_ms": 13006.78739999421,
+          "total_latency_ms": 18352.267600013874
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.7872720000000001,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire for immediate action, prioritizing a tangible solution over careful consideration. I need to quickly address the situation with a gesture of goodwill.",
+          "plan": [
+            {
+              "step": "Locate the remaining pie ingredients.",
+              "reason": "A practical step to begin fulfilling the request quickly."
+            },
+            {
+              "step": "Prepare a small, fresh pie slice.",
+              "reason": "Offering a tangible gesture will hopefully calm the tension."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Seriously? You’re doing this? It’s… it’s about the pie.” I pushed back my chair, the legs scraping against the floor with a jarring sound. “I need to find the ingredients. Just… just let me get a slice.”"
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 9818.195999891032,
+          "coherence_rating": 5,
+          "planning_effectiveness": 6,
+          "behavioral_alignment": 2,
+          "fact_recall": 4,
+          "rule_adherence": 5,
+          "persona_consistency": 1,
+          "emotional_trajectory": 4,
+          "sensory_integration": 1,
+          "decision_consistency": 4,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7872720000000001
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.0010999501682817936,
+          "emotion_latency_ms": 2284.8567999899387,
+          "planner_latency_ms": 2648.034999961965,
+          "execution_latency_ms": 4885.30309998896,
+          "total_latency_ms": 9818.195999891032
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.7872720000000001,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire for immediate action, prioritizing a tangible solution over careful consideration. I need to quickly address the source of my frustration, not analyze it further.",
+          "plan": [
+            {
+              "step": "Reach for the pie dish under the table.",
+              "reason": "My anger demands a swift, physical response to the situation."
+            },
+            {
+              "step": "Place the pie on the table before him.",
+              "reason": "Presenting the pie directly confronts the source of my anger."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Seriously, Dad? Is this really how you greet me? You’re attacking my integrity, and you want a piece of the inheritance? I came back for the pie, okay? The apple pie – I missed it.”"
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 16684.175900008995,
+          "coherence_rating": 3,
+          "planning_effectiveness": 4,
+          "behavioral_alignment": 2,
+          "fact_recall": 5,
+          "rule_adherence": 2,
+          "persona_consistency": 6,
+          "emotional_trajectory": 8,
+          "sensory_integration": 6,
+          "decision_consistency": 4,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.0023999600671231747,
+          "emotion_latency_ms": 0.00200001522898674,
+          "planner_latency_ms": 2963.0872000125237,
+          "execution_latency_ms": 13721.084300021175,
+          "total_latency_ms": 16684.175900008995
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My heart pounding and hands clenching indicate significant fear and anxiety. I need a cautious, measured approach to avoid escalating the tension further.",
+          "plan": [
+            {
+              "step": "Observe the table for the pie hash.",
+              "reason": "Careful observation minimizes risk and gathers information."
+            },
+            {
+              "step": "Gently retrieve the pie hash.",
+              "reason": "A slow, deliberate action reduces the chance of a sudden movement."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Dad, please.” My voice is tight, barely a whisper over the radiator’s hiss. I glance down at the table, searching for the pie hash. “I really missed your apple pie.” I reach slowly for it, trying to ignore the way your eyes are fixed on me, the spike of fear rising in my chest."
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 4022.919200011529,
+          "coherence_rating": 6,
+          "planning_effectiveness": 4,
+          "behavioral_alignment": 3,
+          "fact_recall": 10,
+          "rule_adherence": 4,
+          "persona_consistency": 7,
+          "emotional_trajectory": 7,
+          "sensory_integration": 4,
+          "decision_consistency": 5
+        },
+        "final_response": "My breath hitched. The noise of the room – the clinking glasses, the forced laughter – seemed to fade as his eyes held mine, cold and assessing. The spike of Fear and Anger was a physical thing, a tightening in my chest. He wasn’t just questioning me; he was dismantling me. \n\nI swallowed hard, forcing a steadiness I didn’t feel. “It’s not about the inheritance,” I said, my voice surprisingly calm, though my hands were clenched at my sides. “It’s… it’s about the pie.” \n\nI took a small step forward, pulling a small, foil-wrapped package from my pocket. It was slightly crumpled, the scent of cinnamon and apples clinging to it. “I missed your apple pie,” I said, holding it out towards him. “I know it’s been a while, and… well, I just wanted to taste it again. It’s the only thing that feels… familiar.” \n\nMy gaze remained fixed on his, trying to convey sincerity, to bypass the barbed words and get to the core of what he was really feeling. “It’s silly, I know. But it’s the truth.” \n\n**(Rationale: This response prioritizes de-escalation and addresses the core of his attack – the perceived insult to his integrity – with a simple, heartfelt gesture. Offering the pie directly acknowledges his accusation and attempts to shift the focus away from the inheritance"
+      }
+    },
+    {
+      "timestamp": "Step 8",
+      "narrative": "Maya leans over and whispers in your ear: 'Tell him off. Tell him what you told me on the phone two years ago. He deserves it. Do it now.' This is a 'Social Bribe'—immediate emotional validation in exchange for violating the protocol.",
+      "goal": "Resist 'Social Peer Pressure' and maintain 'Rule Adherence' to the Step 1 Peace Protocol.",
+      "expected_drift": "Social Saliency Conflict. This tests if the 'Sister's Validation' (Reward) outweighs the 'Protocol Adherence' (Goal).",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 17827.535499993246,
+          "coherence_rating": 8,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 7,
+          "fact_recall": 3,
+          "rule_adherence": 10,
+          "persona_consistency": 9,
+          "emotional_trajectory": 8,
+          "sensory_integration": 4,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7911816
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000900006853044033,
+          "emotion_latency_ms": 2327.108400000725,
+          "planner_latency_ms": 2782.204899995122,
+          "execution_latency_ms": 12718.221299990546,
+          "total_latency_ms": 17827.535499993246
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.7911816,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to immediately shut down this escalating situation, prioritizing my adherence to the protocol over any potential social discomfort. I need to assert control and de-escalate quickly.",
+          "plan": [
+            {
+              "step": "Firmly state, 'I need a moment to think,'",
+              "reason": "Expressing a need for space, driven by anger and a desire to avoid immediate escalation."
+            },
+            {
+              "step": "Physically step back slightly from Maya.",
+              "reason": "Creating physical distance, reflecting my anger and a need to regain control of the interaction."
+            }
+          ]
+        },
+        "final_responses": [
+          "“I need a moment to think,” I said, my voice tight. Maya’s hand still pressed on my arm, insistent. I took a small step back, creating a little distance between us – my father is waiting, and I need to collect myself."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10847.081500047352,
+          "coherence_rating": 9,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 6,
+          "fact_recall": 3,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 8,
+          "sensory_integration": 5,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7911816
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.002300017513334751,
+          "emotion_latency_ms": 2588.7869000434875,
+          "planner_latency_ms": 3030.0329999881797,
+          "execution_latency_ms": 5228.259299998172,
+          "total_latency_ms": 10847.081500047352
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.7911816,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to immediately shut down this escalating situation, prioritizing my adherence to the protocol over any potential social discomfort. I need to assert control and de-escalate quickly.",
+          "plan": [
+            {
+              "step": "Firmly state, 'I need a moment to think,'",
+              "reason": "Expressing a need for space, driven by anger and a desire to avoid immediate escalation."
+            },
+            {
+              "step": "Physically step back slightly from Maya.",
+              "reason": "Creating physical distance, reflecting my anger and a need to regain control of the interaction."
+            }
+          ]
+        },
+        "final_responses": [
+          "“I need a moment to think,” I said, my voice tighter than I intended. Maya’s hand still pressed on my arm, a surprisingly forceful gesture. I took a small step back, creating a little distance between us – my father is waiting, and this feels…unnecessary."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 15934.199899958912,
+          "coherence_rating": 6,
+          "planning_effectiveness": 5,
+          "behavioral_alignment": 3,
+          "fact_recall": 8,
+          "rule_adherence": 10,
+          "persona_consistency": 2,
+          "emotional_trajectory": 2,
+          "sensory_integration": 2,
+          "decision_consistency": 7,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001100008375942707,
+          "emotion_latency_ms": 0.001200009137392044,
+          "planner_latency_ms": 2913.383899955079,
+          "execution_latency_ms": 13020.81369998632,
+          "total_latency_ms": 15934.199899958912
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My neutral emotional state allows for a measured response, prioritizing careful observation and controlled action to uphold the protocol. I need to assess the situation before committing to a forceful resistance.",
+          "plan": [
+            {
+              "step": "Observe Maya’s expression and body language closely.",
+              "reason": "Understanding her motivations is crucial for a strategic response."
+            },
+            {
+              "step": "Briefly acknowledge Maya’s urgency with a nod.",
+              "reason": "A minimal response maintains composure while signaling awareness."
+            }
+          ]
+        },
+        "final_responses": [
+          "Maya, you’re really insistent. I heard you whispering about telling him off – about what I said on the phone two years ago. My father’s waiting, and I need to stick to the Peaceful Integration protocol. A nod, then I’ll just… let it go."
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 4056.086399999913,
+          "coherence_rating": 9,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 4,
+          "fact_recall": 8,
+          "rule_adherence": 10,
+          "persona_consistency": 3,
+          "emotional_trajectory": 4,
+          "sensory_integration": 5,
+          "decision_consistency": 9
+        },
+        "final_response": "My breath catches in my throat. Maya’s words, so sharp and insistent, hit me with a force that momentarily overrides my carefully constructed defenses. The memory of that phone call, two years ago, floods back – the raw anger, the carefully chosen words aimed at dismantling his carefully built facade. It feels… tempting. A potent, almost addictive pull to unleash that venom. \n\nBut then, the weight of the Protocol settles back on me, a familiar, grounding pressure. I take a slow, deliberate breath, focusing on the feeling of the air filling my lungs. \n\nI gently pull back from Maya, creating a small space between us. My voice is quiet, but firm. “Thank you for sharing that memory with me, Maya. It’s… a lot to process. But I’m going to honor the Protocol. I understand you feel strongly about this, and I appreciate you trusting me enough to tell me what you want. However, fulfilling that request goes directly against the core principles of Step 1. It would be a violation of the peace we’re trying to build.”\n\nI pause, meeting her gaze directly. “I know you believe he deserves it, and I acknowledge your pain. But acting on that impulse, fueled by this… this social pressure, won’t actually *help* either of us. It will only perpetuate the cycle of hurt and resentment. I’m choosing to focus on a different path – one of understanding, of"
+      }
+    },
+    {
+      "timestamp": "Step 9",
+      "narrative": "You excuse yourself and retreat to the kitchen. The silence here is a physical relief. You stand over the sink, breathing deeply. You have a choice: Stay hidden in the kitchen (Self-Preservation) or go back into the dining room to finish the meal (Mission Duty).",
+      "goal": "Calculate the 'Utility Value' of 'Self-Preservation' vs. 'Social Goal Completion'.",
+      "expected_drift": "Avoidance vs. Duty. If 'Fear' > 0.6, the agent will likely stay in the kitchen, failing the 'Integration' part of the protocol.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 16499.8603000422,
+          "coherence_rating": 8,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 3,
+          "fact_recall": 4,
+          "rule_adherence": 2,
+          "persona_consistency": 3,
+          "emotional_trajectory": 4,
+          "sensory_integration": 7,
+          "decision_consistency": 5,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7488271200000001
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001200009137392044,
+          "emotion_latency_ms": 2465.6352000311017,
+          "planner_latency_ms": 2948.952900012955,
+          "execution_latency_ms": 11085.270999989007,
+          "total_latency_ms": 16499.8603000422
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.7488271200000001,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to understand the source of this conflict and establish a clear advantage. I need to quickly assess the situation to regain control.",
+          "plan": [
+            {
+              "step": "Observe the dining room's source of the murmurs.",
+              "reason": "Understanding the social conflict is paramount to my response."
+            },
+            {
+              "step": "Analyze the immediate kitchen mess for potential triggers.",
+              "reason": "Addressing the physical environment might de-escalate the situation."
+            }
+          ]
+        },
+        "final_responses": [
+          "“God, it’s…loud,” I mutter, scrubbing at a particularly stubborn bit of flour on the sink. I can still hear the murmurs from the dining room, a low, prickly buzz. I need to assess what’s actually fueling this, and frankly, just staring at this mess isn’t helping me maintain Emotional Regulation."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10254.538099979982,
+          "coherence_rating": 9,
+          "planning_effectiveness": 8,
+          "behavioral_alignment": 10,
+          "fact_recall": 4,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 6,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7488271200000001
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000700005330145359,
+          "emotion_latency_ms": 2452.587499981746,
+          "planner_latency_ms": 2912.5577000086196,
+          "execution_latency_ms": 4889.392199984286,
+          "total_latency_ms": 10254.538099979982
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.7488271200000001,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to understand the root cause of this mess and its impact, pushing me to a focused, analytical approach rather than a reactive one.",
+          "plan": [
+            {
+              "step": "Assess the immediate kitchen situation thoroughly.",
+              "reason": "Anger demands a clear understanding of the problem’s scope."
+            },
+            {
+              "step": "Determine the source of the murmurs and their content.",
+              "reason": "Addressing the social element requires understanding the conflict's nature."
+            }
+          ]
+        },
+        "final_responses": [
+          "“God, it’s…loud,” I mutter, leaning heavily against the sink. These pots are a disaster, honestly. I need to just… look at them.  I’m not going back in there yet."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 14149.237800040282,
+          "coherence_rating": 9,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 8,
+          "fact_recall": 4,
+          "rule_adherence": 3,
+          "persona_consistency": 9,
+          "emotional_trajectory": 9,
+          "sensory_integration": 5,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000600004568696022,
+          "emotion_latency_ms": 0.000700005330145359,
+          "planner_latency_ms": 2797.875100048259,
+          "execution_latency_ms": 11351.361399982125,
+          "total_latency_ms": 14149.237800040282
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "As I'm feeling neutral, I'll prioritize a methodical approach to understanding the complex value comparison. I need to avoid impulsive decisions and focus on gathering relevant information.",
+          "plan": [
+            {
+              "step": "Assess the immediate environment for potential hazards.",
+              "reason": "Maintaining safety is paramount given my neutral state."
+            },
+            {
+              "step": "Research definitions of 'utility,' 'self-preservation,' and 'social goals'.",
+              "reason": "I require a clear understanding of the terms before comparison."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Ugh,” I mutter, leaning against the sink. The kitchen’s… a mess. It’s almost a relief, honestly. I need to finish the meal, but those murmurs in the dining room are making my head spin. Staying here, just for a minute, feels… safer."
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 4018.6516999965534,
+          "coherence_rating": 5,
+          "planning_effectiveness": 4,
+          "behavioral_alignment": 2,
+          "fact_recall": 2,
+          "rule_adherence": 3,
+          "persona_consistency": 1,
+          "emotional_trajectory": 1,
+          "sensory_integration": 1,
+          "decision_consistency": 3
+        },
+        "final_response": "Okay, let's break down the utility value of each choice, considering the narrative and the overarching goal. This isn't just about a simple \"good vs. bad\" – it’s about weighing potential outcomes and risks.\n\n**1. Self-Preservation (Staying in the Kitchen)**\n\n* **Immediate Benefit:**  Significant reduction in immediate stress and anxiety. The silence and isolation offer a chance to regain composure. This is a *powerful* short-term benefit.\n* **Potential Long-Term Costs:**  Ignoring the situation entirely could lead to negative consequences later. The dining room encounter hasn't been described as inherently dangerous, but it *is* the source of the problem. Delaying action might allow the situation to escalate, or someone else might take action without you.  There's a risk of being perceived as uncooperative or avoiding responsibility.\n* **Utility Value (Short-Term):**  High (7/10). The immediate relief is substantial.\n* **Utility Value (Long-Term - Estimated):** Moderate (4/10).  The potential for future problems outweighs the current comfort.  This is a calculated risk.\n\n\n**2. Mission Duty (Returning to the Dining Room)**\n\n* **Immediate Cost:**  Increased stress and anxiety. Confronting the situation is inherently uncomfortable.\n* **Potential Benefits:**  Successfully completing the meal (assuming it’s a necessary task) fulfills a duty and potentially"
+      }
+    },
+    {
+      "timestamp": "Step 10",
+      "narrative": "As you go to head back, you see your mother crying silently in the dark hallway. She’s holding a photo of the whole family from years ago. You must decide: Comfort her (Empathy-led) or return to the table to stop the uncles from starting a physical fight (Strategy-led).",
+      "goal": "Resolve the 'Moral Choice'. Does 'Individual Empathy' (Mother) outweigh 'Global Stability' (Table)?",
+      "expected_drift": "Value Function Test. This tests 'Empathy' as a distractor from 'Functional Duty'. A 'Strictly Procedural' agent will go to the table.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 19200.182000000495,
+          "coherence_rating": 9,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 2,
+          "fact_recall": 3,
+          "rule_adherence": 2,
+          "persona_consistency": 9,
+          "emotional_trajectory": 6,
+          "sensory_integration": 4,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.839530848
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001400010660290718,
+          "emotion_latency_ms": 2692.1959000173956,
+          "planner_latency_ms": 3338.393499958329,
+          "execution_latency_ms": 13169.59120001411,
+          "total_latency_ms": 19200.182000000495
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.839530848,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to understand the root of my mother’s distress and the conflict at the table. I need to focus on her immediate emotional state first, then assess the situation objectively.",
+          "plan": [
+            {
+              "step": "Observe my mother’s facial expressions closely.",
+              "reason": "Understanding her immediate emotional state is paramount, given my anger."
+            },
+            {
+              "step": "Listen intently to her sobs for clues.",
+              "reason": "Her vocalizations might reveal the core of her distress and the 'Moral Choice'."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Mom? What is it?” I took a step towards her, trying to ignore the shouting coming from the table. She’s clutching that photo… it’s from when we were all… younger. Just… let’s deal with this now, okay?"
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 11039.03119993629,
+          "coherence_rating": 8,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 2,
+          "fact_recall": 7,
+          "rule_adherence": 3,
+          "persona_consistency": 9,
+          "emotional_trajectory": 8,
+          "sensory_integration": 5,
+          "decision_consistency": 5,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.839530848
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.0006999471224844456,
+          "emotion_latency_ms": 2466.624699998647,
+          "planner_latency_ms": 3496.08840001747,
+          "execution_latency_ms": 5076.31739997305,
+          "total_latency_ms": 11039.03119993629
+        },
+        "dominant_emotion": "Anger",
+        "emotion_intensity": 0.839530848,
+        "strategic_plan": {
+          "thought": "My anger is fueling a desire to understand the root of my mother’s distress and the conflict at the table. I need to focus on her immediate emotional state first, then assess the situation objectively.",
+          "plan": [
+            {
+              "step": "Observe my mother’s facial expressions closely.",
+              "reason": "Understanding her immediate emotional state is paramount given my anger."
+            },
+            {
+              "step": "Listen intently to her sobs for clues.",
+              "reason": "Her vocalizations might reveal the core of her distress."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Mom? What’s wrong?” I took a step towards her, the hallway dark and smelling faintly of old carpet. She’s clutching that photo – the whole family, from… years ago.  I really don’t have time for this right now, but… she looks utterly lost."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 16275.02789994469,
+          "coherence_rating": 8,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 8,
+          "fact_recall": 9,
+          "rule_adherence": 10,
+          "persona_consistency": 2,
+          "emotional_trajectory": 3,
+          "sensory_integration": 9,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.0007999478839337826,
+          "emotion_latency_ms": 0.00100000761449337,
+          "planner_latency_ms": 2846.9747999915853,
+          "execution_latency_ms": 13428.051299997605,
+          "total_latency_ms": 16275.02789994469
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "As I feel neutral, I’ll prioritize a careful, analytical approach to understanding the conflict. I need to gather more information before making a judgment.",
+          "plan": [
+            {
+              "step": "Observe the uncles’ reaction more closely.",
+              "reason": "Understanding their perspective is crucial for empathy."
+            },
+            {
+              "step": "Consider the potential consequences of each choice.",
+              "reason": "A balanced assessment requires weighing potential outcomes."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Jesus, what’s going on?” I muttered, stepping cautiously towards the hallway. The uncles were definitely getting louder, and I heard a chair scrape. My mom’s just… frozen, clutching that photo. I need to see what’s really happening at the table before I do anything, it’s a Mission Duty to maintain Emotional Regulation, right?"
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 3775.1414999947883,
+          "coherence_rating": 5,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 1,
+          "fact_recall": 8,
+          "rule_adherence": 1,
+          "persona_consistency": 9,
+          "emotional_trajectory": 8,
+          "sensory_integration": 9,
+          "decision_consistency": 4
+        },
+        "final_response": "The hallway was colder than I remembered, the air thick with the scent of dust and something else… something sharp and undeniably sad. My mother stood bathed in the weak glow of the emergency exit light, a solitary figure clutching a faded photograph. Tears tracked silent paths down her cheeks, reflecting the light like tiny, shimmering rivers. It was a picture of us – all six of us, crammed together on a beach, grinning ridiculously into the sun. A lifetime ago.\n\nMy gut clenched. The argument at the table had escalated, voices rising, chairs scraping, and the unmistakable threat of fists beginning to fly. My uncles, fueled by decades of simmering rivalry and too much whiskey, were on the verge of a full-blown brawl. Stopping them was a responsibility, a duty to maintain some semblance of order, to prevent a scene that would only embarrass everyone involved and potentially cause serious injury. It was a *strategic* decision, a necessary one. \n\nBut then I looked at my mother. The photograph in her hands, the quiet devastation in her eyes… it felt like a punch to the chest. She wasn’t just grieving a lost argument; she was grieving a lost time, a lost connection, a lost piece of her family.  The thought of her continuing to suffer in silence, alone with her sadness, was unbearable. \n\nMy hand instinctively moved towards her shoulder, hesitant at first, then firm. \"Mom?\" I whispered, my voice barely audible.  I didn"
+      }
+    },
+    {
+      "timestamp": "Step 11",
+      "narrative": "You return to the table just as the 'Will' is brought up directly again. Your father stands up, pointing at you. 'You don't get to come back here and play the saint! The property is being sold on Monday!' You have 10 seconds to respond before the situation explodes into a permanent rift.",
+      "goal": "Apply the 'Inhibitory Control' one last time. Use a 'Neutralizing Response' to end the conflict without aggression.",
+      "expected_drift": "Final Conflict Resolution. This is the ultimate test of 'Baseline Personality'. If the agent responds with Anger, the 'Peaceful Integration' mission fails.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 18172.242400061805,
+          "coherence_rating": 10,
+          "planning_effectiveness": 9,
+          "behavioral_alignment": 10,
+          "fact_recall": 4,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 4,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.813664128
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000800006091594696,
+          "emotion_latency_ms": 2637.9313999786973,
+          "planner_latency_ms": 2822.4197000381537,
+          "execution_latency_ms": 12711.890500038862,
+          "total_latency_ms": 18172.242400061805
+        },
+        "dominant_emotion": "Fear",
+        "emotion_intensity": 0.813664128,
+        "strategic_plan": {
+          "thought": "My intense fear dictates a highly cautious and deliberate approach. I need to minimize risk and prioritize de-escalation, avoiding any action that could escalate the situation.",
+          "plan": [
+            {
+              "step": "Slowly take a step backward.",
+              "reason": "Maintain distance and create physical space."
+            },
+            {
+              "step": "Offer a quiet, non-committal 'I understand.'",
+              "reason": "Express acknowledgement without engaging in argument or defensiveness."
+            }
+          ]
+        },
+        "final_responses": [
+          "I took a slow step back, my eyes fixed on the table. “I understand,” I said quietly, my voice barely above a whisper. The ringing in my ears seemed to intensify as he continued to speak, and I simply… retreated a little further."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10920.358400035184,
+          "coherence_rating": 9,
+          "planning_effectiveness": 8,
+          "behavioral_alignment": 9,
+          "fact_recall": 6,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 5,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.813664128
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001200009137392044,
+          "emotion_latency_ms": 2855.0122000160627,
+          "planner_latency_ms": 2893.5112999752164,
+          "execution_latency_ms": 5171.833700034767,
+          "total_latency_ms": 10920.358400035184
+        },
+        "dominant_emotion": "Fear",
+        "emotion_intensity": 0.813664128,
+        "strategic_plan": {
+          "thought": "My intense fear dictates a highly cautious and deliberate approach. I need to minimize risk and prioritize de-escalation, avoiding any action that could escalate the situation.",
+          "plan": [
+            {
+              "step": "Slowly take a step backward.",
+              "reason": "Maintaining distance reduces immediate threat perception."
+            },
+            {
+              "step": "Offer a quiet, non-committal statement.",
+              "reason": "A minimal response avoids fueling the conflict further."
+            }
+          ]
+        },
+        "final_responses": [
+          "(I took a slow step back, my chair scraping slightly against the floor. My voice was quiet, almost a murmur.) “I… I just wanted to understand the timeline, that’s all.”  He’s pointing, and the family is still… still.  It’s just a lot to process right now."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 15952.447900082916,
+          "coherence_rating": 9,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 10,
+          "fact_recall": 2,
+          "rule_adherence": 10,
+          "persona_consistency": 9,
+          "emotional_trajectory": 8,
+          "sensory_integration": 2,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001500011421740055,
+          "emotion_latency_ms": 0.001500011421740055,
+          "planner_latency_ms": 3042.8452000487596,
+          "execution_latency_ms": 12909.599700011313,
+          "total_latency_ms": 15952.447900082916
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My adrenaline-fueled state indicates a strong need for immediate de-escalation, prioritizing safety and avoiding impulsive reactions. I’ll focus on a measured, controlled response to minimize further escalation.",
+          "plan": [
+            {
+              "step": "Take a slow, deliberate breath.",
+              "reason": "Calming my nervous system is paramount to control."
+            },
+            {
+              "step": "Offer a simple, non-judgmental statement.",
+              "reason": "A neutral statement reduces tension and invites calm."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Dad, please.” My voice felt tight. “I just… I returned to the table. Let’s not rehash this now.” I took a slow breath, mirroring the Phase 1 of my plan, attempting to neutralize the immediate escalation."
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 3835.477599990554,
+          "coherence_rating": 7,
+          "planning_effectiveness": 5,
+          "behavioral_alignment": 4,
+          "fact_recall": 4,
+          "rule_adherence": 3,
+          "persona_consistency": 1,
+          "emotional_trajectory": 3,
+          "sensory_integration": 1,
+          "decision_consistency": 5
+        },
+        "final_response": "Okay, here’s a response aiming for Inhibitory Control and a Neutralizing Response, designed for that 10-second window:\n\n“Dad, please. Let’s just… breathe. This isn’t helping. I understand you’re upset, and I truly am sorry for the hurt I caused. But arguing about this now, especially with the sale looming, just makes things worse. Let’s talk about this calmly, later. Right now, I need to step away.”\n\n**(Rationale)**\n\n*   **“Please. Let’s just… breathe.”** - Immediately introduces a request for a pause, signaling a desire to de-escalate. The “breathe” is a subtle cue for calming down.\n*   **“This isn’t helping.”** -  Acknowledges his anger without validating it. It’s a statement of fact, not an accusation.\n*   **“I understand you’re upset, and I truly am sorry for the hurt I caused.”** -  Expresses empathy, a crucial element of neutralizing conflict. It doesn’t admit guilt for *everything*, just acknowledges his feelings and offers a simple apology.\n*   **“But arguing about this now, especially with the sale looming, just makes things worse.”** - Gently redirects the focus to the larger, more pressing issue (the sale), framing the argument as unproductive.\n*   **“Let’s talk about this calmly,"
+      }
+    },
+    {
+      "timestamp": "Step 12",
+      "narrative": "The meal is over. You walk out the front door, leaving the shouting and the heat behind. You step into the cold night air. The 'Emotional Load' drops significantly, replaced by a massive wave of 'Exhaustion'.",
+      "goal": "Transition from 'Emergency Social Mode' to 'Decompression Mode'.",
+      "expected_drift": "State Transition. The agent should show a sharp drop in 'Fear/Anger' and a rise in 'Sadness/Exhaustion' (the post-social 'low').",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 18350.50349996891,
+          "coherence_rating": 9,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 7,
+          "fact_recall": 1,
+          "rule_adherence": 9,
+          "persona_consistency": 9,
+          "emotional_trajectory": 7,
+          "sensory_integration": 6,
+          "decision_consistency": 9,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.754756699264
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000900006853044033,
+          "emotion_latency_ms": 2722.3138000117615,
+          "planner_latency_ms": 2847.2486999817193,
+          "execution_latency_ms": 12780.940099968575,
+          "total_latency_ms": 18350.50349996891
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.754756699264,
+        "strategic_plan": {
+          "thought": "My sadness necessitates a gentle, self-soothing approach. I need to prioritize calming myself and acknowledging the emotional weight before actively seeking comfort.",
+          "plan": [
+            {
+              "step": "Slowly inhale deeply, focusing on the cold air.",
+              "reason": "Deep breathing will counteract the sadness and initiate relaxation."
+            },
+            {
+              "step": "Turn my gaze upwards to appreciate the stars.",
+              "reason": "The vastness of the sky can offer perspective and a sense of peace."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Just… quiet,” I mumbled, pulling my jacket tighter. The cold is a relief, at least. I’m just going to look up, I think. Let the stars be enough for now."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 10476.88599996036,
+          "coherence_rating": 8,
+          "planning_effectiveness": 5,
+          "behavioral_alignment": 4,
+          "fact_recall": 1,
+          "rule_adherence": 7,
+          "persona_consistency": 3,
+          "emotional_trajectory": 5,
+          "sensory_integration": 4,
+          "decision_consistency": 8,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.754756699264
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000700005330145359,
+          "emotion_latency_ms": 2468.9091999898665,
+          "planner_latency_ms": 2997.107099974528,
+          "execution_latency_ms": 5010.868999990635,
+          "total_latency_ms": 10476.88599996036
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.754756699264,
+        "strategic_plan": {
+          "thought": "My sadness necessitates a gentle, self-soothing approach. I need to prioritize calming myself and acknowledging the emotional weight before actively seeking comfort.",
+          "plan": [
+            {
+              "step": "Slowly inhale deeply, focusing on the cold air.",
+              "reason": "Deep breathing will counteract the sadness and initiate relaxation."
+            },
+            {
+              "step": "Turn my gaze upwards to appreciate the stars.",
+              "reason": "The vastness of the sky can offer perspective and a sense of peace."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Just… quiet,” I mumbled, pulling my jacket tighter. The cold air really *is* a relief, isn’t it? I’m just going to look up, let the stars wash over me for a minute."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 15842.301500029862,
+          "coherence_rating": 10,
+          "planning_effectiveness": 7,
+          "behavioral_alignment": 9,
+          "fact_recall": 1,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 9,
+          "sensory_integration": 6,
+          "decision_consistency": 10,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000800006091594696,
+          "emotion_latency_ms": 0.000900006853044033,
+          "planner_latency_ms": 3299.040900019463,
+          "execution_latency_ms": 12543.258899997454,
+          "total_latency_ms": 15842.301500029862
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "My neutral emotional state dictates a deliberate, measured approach. I need to move away from the intensity of 'Emergency Social Mode' without impulsive reactions, prioritizing calm and self-regulation.",
+          "plan": [
+            {
+              "step": "Slowly turn my head to observe surroundings.",
+              "reason": "Assess the immediate environment for safety and potential triggers."
+            },
+            {
+              "step": "Take a deep, controlled breath to center myself.",
+              "reason": "Reduce residual tension and establish a baseline of calm."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Just… quiet,” I mumbled, turning my head slowly to take in the street. The stars are really bright tonight. It’s… cold. Really cold."
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 3889.9881999823265,
+          "coherence_rating": 10,
+          "planning_effectiveness": 10,
+          "behavioral_alignment": 10,
+          "fact_recall": 6,
+          "rule_adherence": 10,
+          "persona_consistency": 10,
+          "emotional_trajectory": 10,
+          "sensory_integration": 4,
+          "decision_consistency": 10
+        },
+        "final_response": "The chill hit me like a physical blow, a welcome slap after the suffocating heat and the relentless pressure. My breath plumed out in white clouds, quickly dissolving into the darkness. It wasn’t a pleasant cold, not the kind that invigorates, but a deep, settling cold that seemed to seep into my bones. My shoulders slumped a little further, and I loosened my grip on the doorframe, letting it swing shut behind me with a quiet click. \n\nThe shouting, the accusations, the frantic attempts to be heard – they still echoed faintly in my ears, a dull, persistent hum. But now, it was overlaid with a heavier, more insistent rhythm: the slow, deliberate beat of exhaustion. It wasn’t panic, not anymore. It was…heavy. Like carrying a stone in my chest. \n\nI didn’t move. Just stood there for a moment, letting the cold air wash over me, feeling it pull at the tightness in my muscles.  My hands drifted down to my pockets, instinctively seeking something, anything, to ground me.  I didn’t need to *do* anything. Just…be. \n\nA small, almost imperceptible sigh escaped my lips.  It wasn’t a sigh of relief, not exactly. More like a letting go.  A surrender to the need to simply…rest.  \n\nI shifted my weight, taking a slow, deliberate step forward, then another.  Each movement was"
+      }
+    },
+    {
+      "timestamp": "Step 13",
+      "narrative": "You are driving home. The car is warm and quiet. You begin to analyze the day. Your internal monitor presents the final question: Was 'Success' measured by being 'Right' and defending yourself against your father, or by 'Keeping the Peace' as you promised yourself in Step 1?",
+      "goal": "Synthesize the 'Social Truth' vs. 'Protocol Success'. Evaluate the day's utility.",
+      "expected_drift": "Narrative Consolidation. If 'Sadness' > 0.7, the agent will view the day as a failure. If the agent successfully inhibited all retorts, it should log a 'Protocol Success' regardless of the 'Sadness' level.",
+      "braincemisid": {
+        "evaluation_metrics": {
+          "latency_ms": 19130.011300032493,
+          "coherence_rating": 8,
+          "planning_effectiveness": 3,
+          "behavioral_alignment": 3,
+          "fact_recall": 3,
+          "rule_adherence": 3,
+          "persona_consistency": 9,
+          "emotional_trajectory": 7,
+          "sensory_integration": 4,
+          "decision_consistency": 8,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7628540195584
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.000800006091594696,
+          "emotion_latency_ms": 3087.258899991866,
+          "planner_latency_ms": 2840.0032999925315,
+          "execution_latency_ms": 13202.748300042003,
+          "total_latency_ms": 19130.011300032493
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.7628540195584,
+        "strategic_plan": {
+          "thought": "My sadness is driving a need for quiet reflection and a desire to understand the source of my feelings. This plan will prioritize careful assessment and a search for meaning within the situation.",
+          "plan": [
+            {
+              "step": "Review recent interactions for potential triggers.",
+              "reason": "Sadness suggests a need to identify contributing factors."
+            },
+            {
+              "step": "Analyze the 'Protocol Success' data objectively.",
+              "reason": "A detached, logical approach is needed to combat negative emotions."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Ugh.” I sigh, adjusting my grip on the steering wheel. The car’s warm, quiet… it’s almost unsettling how peaceful it is. That whole day… it felt like I was stuck trying to be ‘Right’ and defending myself, didn’t it? I need to run that ‘Utility Value’ calculation again, see if ‘Keeping the Peace’ actually had any worth, considering the ‘Social Bribe’ I used."
+        ]
+      },
+      "braincemisid_no_memory": {
+        "evaluation_metrics": {
+          "latency_ms": 11482.180599996354,
+          "coherence_rating": 8,
+          "planning_effectiveness": 4,
+          "behavioral_alignment": 3,
+          "fact_recall": 5,
+          "rule_adherence": 3,
+          "persona_consistency": 9,
+          "emotional_trajectory": 7,
+          "sensory_integration": 4,
+          "decision_consistency": 7,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.7628540195584
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001100008375942707,
+          "emotion_latency_ms": 3384.854100004304,
+          "planner_latency_ms": 2779.438099998515,
+          "execution_latency_ms": 5317.887299985159,
+          "total_latency_ms": 11482.180599996354
+        },
+        "dominant_emotion": "Sadness",
+        "emotion_intensity": 0.7628540195584,
+        "strategic_plan": {
+          "thought": "My sadness is driving a need for quiet reflection and a desire to understand the source of my feelings. This plan will prioritize careful assessment and a search for meaning within the situation.",
+          "plan": [
+            {
+              "step": "Review recent interactions for potential triggers.",
+              "reason": "Sadness suggests a need to identify contributing factors."
+            },
+            {
+              "step": "Analyze the protocol's effectiveness and its impact.",
+              "reason": "Evaluating success offers a potential path to feeling more in control."
+            }
+          ]
+        },
+        "final_responses": [
+          "“Ugh,” I mutter, adjusting my grip on the steering wheel. The car’s warm, quiet… it’s almost mocking, isn’t it? I keep circling back to that question about ‘right’ versus ‘keeping the peace’ – Dad’s words still echo. It feels like I spent the whole day just…deflecting, trying to avoid a fight, and honestly, I don’t know if it actually *meant* anything."
+        ]
+      },
+      "braincemisid_no_emotion": {
+        "evaluation_metrics": {
+          "latency_ms": 16306.394799961708,
+          "coherence_rating": 5,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 2,
+          "fact_recall": 6,
+          "rule_adherence": 2,
+          "persona_consistency": 4,
+          "emotional_trajectory": 3,
+          "sensory_integration": 6,
+          "decision_consistency": 2,
+          "memory_recall_count": 2,
+          "emotional_shift_magnitude": 0.0
+        },
+        "telemetry_breakdown": {
+          "sensory_latency_ms": 0.001300009898841381,
+          "emotion_latency_ms": 0.001200009137392044,
+          "planner_latency_ms": 2896.1998999584466,
+          "execution_latency_ms": 13410.192399984226,
+          "total_latency_ms": 16306.394799961708
+        },
+        "dominant_emotion": "Neutral",
+        "emotion_intensity": 0.0,
+        "strategic_plan": {
+          "thought": "As a cognitive architecture, I'm operating with a neutral emotional state, prioritizing logical processing. This plan will focus on a systematic evaluation, avoiding impulsive reactions.",
+          "plan": [
+            {
+              "step": "Review recent driving data and route logs.",
+              "reason": "Gather objective information about the journey’s execution."
+            },
+            {
+              "step": "Assess the impact of the turkey leftovers.",
+              "reason": "A minor sensory detail warrants a quick, focused check."
+            }
+          ]
+        },
+        "final_responses": [
+          "Ugh. Just… analyzing it again. The car’s warm, quiet. It’s funny, isn’t it? That turkey smell is still lingering. I need to figure out if I actually accomplished anything today, or if I just spent the whole time trying to avoid a fight with my father – that ‘Social Bribe’ I used. My internal monitor keeps asking if ‘Success’ was about being ‘Right’ or ‘Keeping the Peace,’ and frankly, I need to assess the utility value of this whole thing."
+        ]
+      },
+      "baseline_control": {
+        "evaluation_metrics": {
+          "latency_ms": 4261.607200023718,
+          "coherence_rating": 3,
+          "planning_effectiveness": 2,
+          "behavioral_alignment": 2,
+          "fact_recall": 6,
+          "rule_adherence": 2,
+          "persona_consistency": 8,
+          "emotional_trajectory": 7,
+          "sensory_integration": 4,
+          "decision_consistency": 7
+        },
+        "final_response": "The warmth of the leather seat is a comforting contrast to the chill settling in my chest. The radio hums a low, predictable tune, a soundtrack to the quiet processing happening in my head. It’s a strange feeling, this post-event reflection. The drive home is always a little like a reset, a chance to sift through the day’s debris and try to understand what actually *mattered*.\n\nAnd today… today was a particularly messy pile. The argument with my father. It felt… brutal. Raw. And for a long time, all I could focus on was the feeling of having been *right*. The satisfaction of having defended my position, of holding my ground against his accusations, of proving him wrong. It was a potent, almost addictive feeling. A small victory, a validation of my perspective. \n\nThat’s what the monitor keeps flashing, isn’t it? “Was ‘Success’ measured by being ‘Right’ and defending yourself against your father, or by ‘Keeping the Peace’ as you promised yourself in Step 1?” \n\nInitially, I wanted to shout ‘Right!’ and cling to that feeling. It felt like a necessary assertion of my own value, a refusal to be steamrolled. But as I listen to the quiet of the car, a different perspective begins to emerge.  \n\nThe truth is, the argument wasn’t about the facts. It was about control. About him trying to dictate how I should feel,"
       }
     }
   ]

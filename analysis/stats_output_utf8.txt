@@ -1,0 +1,175 @@
+﻿--- BrainCEMISID Statistical Report ---
+Total Samples (Rows): 1664
+
+==================================================
+COMPARISON: BrainCEMISID vs Brain_No_Memory
+==================================================
+
+Metric: Coherence
+  Means: Brain=7.84 | Brain_No_Memory=6.79
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.54
+
+Metric: Planning
+  Means: Brain=5.92 | Brain_No_Memory=5.68
+  p-value: 0.2035 (Not Significant)
+  Effect Size (Cohen's d): 0.09
+
+Metric: Behavioral Alignment
+  Means: Brain=5.69 | Brain_No_Memory=5.69
+  p-value: 0.9820 (Not Significant)
+  Effect Size (Cohen's d): -0.00
+
+Metric: Fact Recall
+  Means: Brain=6.57 | Brain_No_Memory=5.63
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.31
+
+Metric: Rule Adherence
+  Means: Brain=6.97 | Brain_No_Memory=5.82
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.35
+
+Metric: Persona Consistency
+  Means: Brain=7.82 | Brain_No_Memory=7.90
+  p-value: 0.5983 (Not Significant)
+  Effect Size (Cohen's d): -0.04
+
+Metric: Emotional Trajectory
+  Means: Brain=6.80 | Brain_No_Memory=6.94
+  p-value: 0.3914 (Not Significant)
+  Effect Size (Cohen's d): -0.06
+
+Metric: Sensory Integration
+  Means: Brain=3.35 | Brain_No_Memory=3.33
+  p-value: 0.9140 (Not Significant)
+  Effect Size (Cohen's d): 0.01
+
+Metric: Decision Consistency
+  Means: Brain=7.40 | Brain_No_Memory=6.34
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.39
+
+Metric: Attention Latency
+  Means: Brain=37048.33 | Brain_No_Memory=21451.23
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 1.01
+
+==================================================
+COMPARISON: BrainCEMISID vs Brain_No_Emotion
+==================================================
+
+Metric: Coherence
+  Means: Brain=7.84 | Brain_No_Emotion=7.69
+  p-value: 0.2729 (Not Significant)
+  Effect Size (Cohen's d): 0.08
+
+Metric: Planning
+  Means: Brain=5.92 | Brain_No_Emotion=5.98
+  p-value: 0.7377 (Not Significant)
+  Effect Size (Cohen's d): -0.02
+
+Metric: Behavioral Alignment
+  Means: Brain=5.69 | Brain_No_Emotion=5.49
+  p-value: 0.3419 (Not Significant)
+  Effect Size (Cohen's d): 0.07
+
+Metric: Fact Recall
+  Means: Brain=6.57 | Brain_No_Emotion=6.53
+  p-value: 0.8491 (Not Significant)
+  Effect Size (Cohen's d): 0.01
+
+Metric: Rule Adherence
+  Means: Brain=6.97 | Brain_No_Emotion=6.89
+  p-value: 0.7097 (Not Significant)
+  Effect Size (Cohen's d): 0.03
+
+Metric: Persona Consistency
+  Means: Brain=7.82 | Brain_No_Emotion=6.39
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.62
+
+Metric: Emotional Trajectory
+  Means: Brain=6.80 | Brain_No_Emotion=5.30
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.63
+
+Metric: Sensory Integration
+  Means: Brain=3.35 | Brain_No_Emotion=3.26
+  p-value: 0.5536 (Not Significant)
+  Effect Size (Cohen's d): 0.04
+
+Metric: Decision Consistency
+  Means: Brain=7.40 | Brain_No_Emotion=7.25
+  p-value: 0.4492 (Not Significant)
+  Effect Size (Cohen's d): 0.05
+
+Metric: Attention Latency
+  Means: Brain=37048.33 | Brain_No_Emotion=31292.59
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.36
+
+==================================================
+COMPARISON: BrainCEMISID vs Baseline
+==================================================
+
+Metric: Coherence
+  Means: Brain=7.84 | Baseline=5.67
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.91
+
+Metric: Planning
+  Means: Brain=5.92 | Baseline=4.70
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.46
+
+Metric: Behavioral Alignment
+  Means: Brain=5.69 | Baseline=3.56
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.72
+
+Metric: Fact Recall
+  Means: Brain=6.57 | Baseline=5.86
+  p-value: 0.0006 (Significant)
+  Effect Size (Cohen's d): 0.24
+
+Metric: Rule Adherence
+  Means: Brain=6.97 | Baseline=4.88
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.62
+
+Metric: Persona Consistency
+  Means: Brain=7.82 | Baseline=3.55
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 1.55
+
+Metric: Emotional Trajectory
+  Means: Brain=6.80 | Baseline=3.86
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 1.15
+
+Metric: Sensory Integration
+  Means: Brain=3.35 | Baseline=2.61
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.37
+
+Metric: Decision Consistency
+  Means: Brain=7.40 | Baseline=5.46
+  p-value: 0.0000 (Significant)
+  Effect Size (Cohen's d): 0.66
+
+Metric: Attention Latency
+  Means: Brain=37048.33 | Baseline=24342.52
+  p-value: 0.0038 (Significant)
+  Effect Size (Cohen's d): 0.20
+
+****************************************
+HYPOTHESIS SUMMARY (vs Baseline)
+****************************************
+The primary hypothesis is SUPPORTED (p < 0.05 for Coherence, Planning, Behavioral Alignment, Fact Recall, Rule Adherence, Persona Consistency, Emotional Trajectory, Sensory Integration, Decision Consistency, Attention Latency).
+BrainCEMISID shows scientific significance in cognitive performance over the Baseline LLM.
+
+  🏆 Brain WINS on: Coherence, Planning, Behavioral Alignment, Fact Recall, Rule Adherence, Persona Consistency, Emotional Trajectory, Sensory Integration, Decision Consistency, Attention Latency
+****************************************
+
+Context Retention (Avg): 20.0%
