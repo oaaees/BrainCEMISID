@@ -107,12 +107,6 @@ La evaluación experimental comparó **BrainCEMISID** frente a un **LLM Baseline
 #### 2. Comparativa de Rendimiento Promedio por Métrica
 ![Rendimiento Promedio](./analysis/plots_es/rendimiento_promedio_brain_vs_baseline.png)
 
-#### 3. Compromiso Rendimiento vs. Latencia de Atención
-![Trade-off Latencia](./analysis/plots_es/dispersion_tradeoff_latencia.png)
-
-#### 4. Análisis de Varianza y Distribución
-![Varianza Rendimiento](./analysis/plots_es/varianza_rendimiento_cajas.png)
-
 ---
 
 ## 🔍 Estudios de Ablación / Ablation Findings
