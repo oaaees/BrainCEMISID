@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainCEMISID - Arquitectura Cognitiva Sintética</title>
+  <meta name="description" content="BrainCEMISID: Una Arquitectura Cognitiva Sintética utilizando IA generativa. Proyecto de Grado de Ingeniería de Sistemas.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: rgba(18, 24, 38, 0.75);
+      --bg-card-hover: rgba(26, 35, 56, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(99, 102, 241, 0.3);
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+      --accent-cyan: #06b6d4;
+      --accent-green: #10b981;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --shadow-glow: 0 8px 32px 0 rgba(99, 102, 241, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(168, 85, 247, 0.12) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-dark); }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .btn-nav {
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid var(--primary);
+      color: var(--primary-light) !important;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+    }
+
+    .btn-nav:hover {
+      background: var(--primary);
+      color: #fff !important;
+      box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 9rem 0 5rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: var(--primary-light);
+      padding: 0.35rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero h1 span {
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 2.5rem auto;
+      font-weight: 400;
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary-gradient);
+      color: #fff;
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* Stats Banner */
+    .stats-banner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+    }
+
+    .stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-val.accent-purple { color: #a855f7; }
+    .stat-val.accent-cyan { color: var(--accent-cyan); }
+    .stat-val.accent-green { color: var(--accent-green); }
+
+    .stat-lbl {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 5rem 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Architecture Grid */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .arch-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .arch-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .arch-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+    }
+
+    .arch-card:hover::before {
+      opacity: 1;
+    }
+
+    .arch-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .arch-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+      color: #fff;
+    }
+
+    .arch-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Charts Layout */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .charts-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.4rem; }
+    }
+
+    .chart-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .chart-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 340px;
+      width: 100%;
+    }
+
+    /* Table Styling */
+    .table-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow-x: auto;
+      backdrop-filter: blur(10px);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 1.1rem 1.4rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-main);
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .badge-effect {
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .badge-huge { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); }
+    .badge-large { background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); }
+    .badge-medium { background: rgba(6, 182, 212, 0.2); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.4); }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .gallery-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .gallery-info {
+      padding: 1.2rem;
+    }
+
+    .gallery-info h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .gallery-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Tabs */
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-brand">
+      <i class="fa-solid fa-brain"></i> BrainCEMISID
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#arquitectura">Arquitectura</a></li>
+      <li><a href="#resultados">Resultados</a></li>
+      <li><a href="#graficos">Gráficos</a></li>
+      <li><a href="../BrainCEMISID_%20Una%20Arquitectura%20Cognitiva%20Sint%C3%A9tica%20utilizando%20IA%20generativa.pdf" target="_blank" class="btn-nav"><i class="fa-solid fa-file-pdf"></i> Tesis PDF</a></li>
+      <li><a href="https://github.com/oaaees/BrainCEMISID" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="inicio" class="hero">
+    <div class="container">
+      <div class="badge-hero">
+        <i class="fa-solid fa-graduation-cap"></i> Proyecto de Grado · Ingeniería de Sistemas
+      </div>
+      <h1>
+        Arquitectura Cognitiva Sintética<br>
+        <span>utilizando IA Generativa</span>
+      </h1>
+      <p>
+        Un marco inspirado en el paradigma COALA para dotar a los Modelos de Lenguaje de Gran Escala (LLMs) de memoria episódica vectorial, dinámica emocional interna y planificación procedimental estructurada.
+      </p>
+      <div class="cta-group">
+        <a href="../BrainCEMISID_%20Una%20Arquitectura%20Cognitiva%20Sint%C3%A9tica%20utilizando%20IA%20generativa.pdf" target="_blank" class="btn btn-primary">
+          <i class="fa-solid fa-download"></i> Descargar Tesis en PDF
+        </a>
+        <a href="#resultados" class="btn btn-secondary">
+          <i class="fa-solid fa-chart-line"></i> Explorar Resultados
+        </a>
+        <a href="https://github.com/oaaees/BrainCEMISID" target="_blank" class="btn btn-secondary">
+          <i class="fa-brands fa-github"></i> Código en GitHub
+        </a>
+      </div>
+
+      <!-- Quick Metrics Banner -->
+      <div class="stats-banner">
+        <div class="stat-card">
+          <div class="stat-val accent-purple">1,664</div>
+          <div class="stat-lbl">Muestras Experimentales Evaluadas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val accent-cyan">+120%</div>
+          <div class="stat-lbl">Mejora en Consistencia de Persona</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val accent-green">1.55</div>
+          <div class="stat-lbl">Tamaño del Efecto (Cohen's d)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">9</div>
+          <div class="stat-lbl">Métricas Cognitivas Evaluadas</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Architecture Section -->
+  <section id="arquitectura">
+    <div class="container">
+      <div class="section-title">
+        <h2>Arquitectura Cognitiva del Sistema</h2>
+        <p>BrainCEMISID desacopla la inferencia reactiva del LLM en cinco componentes especializados de orquestación cognitiva.</p>
+      </div>
+
+      <div class="arch-grid">
+        <div class="arch-card">
+          <div class="arch-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>SensoryGate (Percepción)</h3>
+          <p>Filtra y extrae estímulos contextuales del entorno en 5 dimensiones sensoriales (vista, oído, tacto, olfato, gusto) modulando el foco de atención del agente.</p>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>EmotionalState (Afecto)</h3>
+          <p>Rastrea vectores continuos de valencia y arousal emocional (Alegría, Frustración, Ansiedad), adaptando dinámicamente la personalidad y el tono de respuesta.</p>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Memory (ChromaDB Vectorial)</h3>
+          <p>Almacenes de memoria episódica a largo plazo y memoria de trabajo declarativa para recuperar hechos clave y contextos pasados vía embeddings vectoriales.</p>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-icon"><i class="fa-solid fa-route"></i></div>
+          <h3>StrategicPlanner (Procedimental)</h3>
+          <p>Descompone metas complejas en planes de acción ordenados multi-fase antes de emitir cualquier decisión ejecutable.</p>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>LLMEngine (Single-Pass Execution)</h3>
+          <p>Motor de inferencia compatible con Gemini API y modelos locales Ollama (Gemma3:1b) ejecutando consolidaciones contextuales unificadas.</p>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-icon"><i class="fa-solid fa-gavel"></i></div>
+          <h3>Evaluador LLM-as-a-Judge</h3>
+          <p>Framework automatizado con 9 métricas independientes para calificar cuantitativamente las respuestas en simulaciones multi-agente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empirical Results Section -->
+  <section id="resultados">
+    <div class="container">
+      <div class="section-title">
+        <h2>Resultados Empíricos y Análisis Estadístico</h2>
+        <p>Evaluación comparativa basada en pruebas t-Student de Welch y magnitud de efecto Cohen's d sobre 1,664 iteraciones.</p>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="charts-grid">
+        <div class="chart-box">
+          <h3><i class="fa-solid fa-chart-pie"></i> Perfil Radar Cognitivo</h3>
+          <div class="chart-container">
+            <canvas id="radarChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <h3><i class="fa-solid fa-chart-bar"></i> BrainCEMISID vs. Baseline LLM</h3>
+          <div class="chart-container">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics Summary Table -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Métrica Cognitiva</th>
+              <th>BrainCEMISID (Media)</th>
+              <th>Baseline LLM (Media)</th>
+              <th>p-valor (Significancia)</th>
+              <th>d de Cohen (Efecto)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Consistencia de Persona</strong></td>
+              <td><strong>7.82</strong></td>
+              <td>3.55</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-huge">1.55 (Masivo)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Trayectoria Emocional</strong></td>
+              <td><strong>6.80</strong></td>
+              <td>3.86</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-huge">1.15 (Masivo)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Coherencia Lógica</strong></td>
+              <td><strong>7.84</strong></td>
+              <td>5.67</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-large">0.91 (Grande)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Alineación Conductual</strong></td>
+              <td><strong>5.69</strong></td>
+              <td>3.56</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-large">0.72 (Mediano)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Consistencia de Decisiones</strong></td>
+              <td><strong>7.40</strong></td>
+              <td>5.46</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-medium">0.66 (Mediano)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Adherencia a Reglas</strong></td>
+              <td><strong>6.97</strong></td>
+              <td>4.88</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-medium">0.62 (Mediano)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Efectividad de Planificación</strong></td>
+              <td><strong>5.92</strong></td>
+              <td>4.70</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-medium">0.46 (Mediano)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Integración Sensorial</strong></td>
+              <td><strong>3.35</strong></td>
+              <td>2.61</td>
+              <td>&lt; 0.0001 *</td>
+              <td><span class="badge-effect badge-medium">0.37 (Pequeño/Med)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Recuperación de Hechos</strong></td>
+              <td><strong>6.57</strong></td>
+              <td>5.86</td>
+              <td>&lt; 0.0010 *</td>
+              <td><span class="badge-effect badge-medium">0.24 (Pequeño)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plots Gallery Section -->
+  <section id="graficos">
+    <div class="container">
+      <div class="section-title">
+        <h2>Galería de Visualización Experimental</h2>
+        <p>Gráficos generados estadísticamente por el motor de análisis del proyecto.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="../analysis/plots_es/radar_cognitivo.png" alt="Perfil Radar Cognitivo">
+          <div class="gallery-info">
+            <h4>Perfil Radar Cognitivo</h4>
+            <p>Comparación multidimensional entre el modelo BrainCEMISID y el Baseline.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../analysis/plots_es/rendimiento_promedio_brain_vs_baseline.png" alt="Rendimiento Promedio">
+          <div class="gallery-info">
+            <h4>Rendimiento Promedio por Métrica</h4>
+            <p>Puntuación media obtenida sobre una escala estandarizada de 0 a 10.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../analysis/plots_es/dispersion_tradeoff_latencia.png" alt="Trade-off Latencia">
+          <div class="gallery-info">
+            <h4>Dispersion Rendimiento vs. Latencia</h4>
+            <p>Relación entre la latencia de atención y la calidad cualitativa obtenida.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../analysis/plots_es/varianza_rendimiento_cajas.png" alt="Varianza Rendimiento">
+          <div class="gallery-info">
+            <h4>Distribución de Varianza (Boxplot)</h4>
+            <p>Estabilidad de respuestas y rango intercuartílico de puntuaciones.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../analysis/plots_es/deriva_conductual.png" alt="Deriva Conductual">
+          <div class="gallery-info">
+            <h4>Evolución y Deriva Conductual</h4>
+            <p>Consistencia del agente a través de iteraciones simuladas continuas.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../analysis/plots_es/matriz_valores_p.png" alt="Matriz Valores p">
+          <div class="gallery-info">
+            <h4>Matriz de Valores p (Welch)</h4>
+            <p>Significancia estadística cruzada entre modelos probados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        <strong>BrainCEMISID: Una Arquitectura Cognitiva Sintética utilizando IA generativa</strong><br>
+        Trabajo Especial de Grado · Escuela de Ingeniería de Sistemas<br>
+        Desarrollado con Python, ChromaDB, Gemini API y Ollama.<br>
+        📄 <a href="../BrainCEMISID_%20Una%20Arquitectura%20Cognitiva%20Sint%C3%A9tica%20utilizando%20IA%20generativa.pdf" target="_blank">Leer documento de tesis en PDF</a> | 
+        🌐 <a href="https://github.com/oaaees/BrainCEMISID" target="_blank">Ver Repositorio en GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Chart Scripts -->
+  <script>
+    const metrics = [
+      'Persona Consistency', 
+      'Emotional Trajectory', 
+      'Coherence', 
+      'Decision Consistency', 
+      'Rule Adherence', 
+      'Fact Recall', 
+      'Planning Effectiveness', 
+      'Behavioral Alignment', 
+      'Sensory Integration'
+    ];
+
+    const brainScores = [7.82, 6.80, 7.84, 7.40, 6.97, 6.57, 5.92, 5.69, 3.35];
+    const baselineScores = [3.55, 3.86, 5.67, 5.46, 4.88, 5.86, 4.70, 3.56, 2.61];
+
+    // Radar Chart
+    const ctxRadar = document.getElementById('radarChart').getContext('2d');
+    new Chart(ctxRadar, {
+      type: 'radar',
+      data: {
+        labels: metrics,
+        datasets: [{
+          label: 'BrainCEMISID (Full)',
+          data: brainScores,
+          backgroundColor: 'rgba(99, 102, 241, 0.25)',
+          borderColor: '#6366f1',
+          pointBackgroundColor: '#818cf8',
+          borderWidth: 2
+        }, {
+          label: 'Baseline LLM',
+          data: baselineScores,
+          backgroundColor: 'rgba(239, 68, 68, 0.15)',
+          borderColor: '#ef4444',
+          pointBackgroundColor: '#f87171',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+            pointLabels: { color: '#9ca3af', font: { size: 10 } },
+            ticks: { color: '#6b7280', backdropColor: 'transparent' },
+            suggestedMin: 0,
+            suggestedMax: 10
+          }
+        },
+        plugins: {
+          legend: { labels: { color: '#f3f4f6' } }
+        }
+      }
+    });
+
+    // Bar Chart
+    const ctxBar = document.getElementById('barChart').getContext('2d');
+    new Chart(ctxBar, {
+      type: 'bar',
+      data: {
+        labels: ['Persona', 'Emotion', 'Coherence', 'Decision', 'Rule', 'Recall', 'Planning', 'Behavior', 'Sensory'],
+        datasets: [{
+          label: 'BrainCEMISID',
+          data: brainScores,
+          backgroundColor: '#6366f1'
+        }, {
+          label: 'Baseline LLM',
+          data: baselineScores,
+          backgroundColor: 'rgba(239, 68, 68, 0.6)'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
+          y: { grid: { color: 'rgba(255, 255, 255, 0.1)' }, ticks: { color: '#9ca3af' }, min: 0, max: 10 }
+        },
+        plugins: {
+          legend: { labels: { color: '#f3f4f6' } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
